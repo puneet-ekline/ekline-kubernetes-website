@@ -441,7 +441,7 @@ LocalSubjectAccessReview
 SelfSubjectRulesReview
 : A review which returns the set of actions a user can perform within a namespace. Useful for users to quickly summarize their own access, or for UIs to hide/show actions.
 
-These APIs can be queried by creating normal Kubernetes resources, where the response `status`
+These APIs can be queried by creating Kubernetes resources, where the response `status`
 field of the returned object is the result of the query. For example:
 
 ```bash

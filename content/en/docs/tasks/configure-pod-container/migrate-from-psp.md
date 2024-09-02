@@ -339,7 +339,7 @@ I0218 00:59:44.903350      13 plugins.go:161] Loaded 14 validating admission con
 You should see `PodSecurity` (in the validating admission controllers), and neither list should
 contain `PodSecurityPolicy`.
 
-Once you are certain the PSP admission controller is disabled (and after sufficient soak time to be
+Once you are certain the PSP admission controller is turned off (and after sufficient soak time to be
 confident you won't need to roll back), you are free to delete your PodSecurityPolicies and any
 associated Roles, ClusterRoles, RoleBindings and ClusterRoleBindings (just make sure they don't
 grant any other unrelated permissions).

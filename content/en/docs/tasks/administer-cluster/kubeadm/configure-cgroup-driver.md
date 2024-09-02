@@ -124,4 +124,4 @@ For each node in the cluster:
 Execute these steps on nodes one at a time to ensure workloads
 have sufficient time to schedule on different nodes.
 
-Once the process is complete ensure that all nodes and workloads are healthy.
+Once the process is complete ensure that all nodes and workloads are functioning properly.

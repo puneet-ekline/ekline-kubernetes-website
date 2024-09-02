@@ -17,7 +17,7 @@ In order to ensure that communication is kept private, not interfered with, and 
 each component of the cluster is talking to another trusted component, we strongly
 recommend using client TLS certificates on nodes.
 
-The normal process of bootstrapping these components, especially worker nodes that need certificates
+The process of bootstrapping these components, especially worker nodes that need certificates
 so they can communicate safely with kube-apiserver, can be a challenging process as it is often outside
 of the scope of Kubernetes and requires significant additional work.
 This in turn, can make it challenging to initialize or scale a cluster.
@@ -76,7 +76,7 @@ In the bootstrap initialization process, the following occurs:
 1. Certificate is issued to the kubelet
 1. kubelet retrieves the certificate
 1. kubelet creates a proper `kubeconfig` with the key and signed certificate
-1. kubelet begins normal operation
+1. kubelet begins standard operation
 1. Optional: if configured, kubelet automatically requests renewal of the certificate when it is close to expiry
 1. The renewed certificate is approved and issued, either automatically or manually, depending on configuration.
 
@@ -116,7 +116,7 @@ The kube-apiserver has several requirements to enable TLS bootstrapping:
 
 ### Recognizing client certificates
 
-This is normal for all client certificate authentication.
+This is typical for all client certificate authentication.
 If not already set, add the `--client-ca-file=FILENAME` flag to the kube-apiserver command to enable
 client certificate authentication, referencing a certificate authority bundle
 containing the signing certificate, for example
@@ -351,7 +351,7 @@ The kubelet requires the following configuration to bootstrap:
 
 The bootstrap `kubeconfig` should be in a path available to the kubelet, for example `/var/lib/kubelet/bootstrap-kubeconfig`.
 
-Its format is identical to a normal `kubeconfig` file. A sample file might look as follows:
+Its format is identical to a standard `kubeconfig` file. A sample file might look as follows:
 
 ```yaml
 apiVersion: v1

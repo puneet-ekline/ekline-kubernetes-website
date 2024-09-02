@@ -293,7 +293,7 @@ Content-Type: application/json
 
 `APIResponseCompression` is an option that allows the API server to compress the responses for **get**
 and **list** requests, reducing the network bandwidth and improving the performance of large-scale clusters.
-It is enabled by default since Kubernetes 1.16 and it can be disabled by including
+It is enabled by default since Kubernetes 1.16 and it can be turned off by including
 `APIResponseCompression=false` in the `--feature-gates` flag on the API server.
 
 API response compression can significantly reduce the size of the response, especially for large resources or
@@ -868,7 +868,7 @@ string, working as an enum, and the only accepted values are:
   persisted, or an error if the request could not be fulfilled.
 
 `All`
-: Every stage runs as normal, except for the final storage stage where side effects
+: Every stage runs as expected, except for the final storage stage where side effects
   are prevented.
 
 
@@ -877,7 +877,7 @@ When you set `?dryRun=All`, any relevant
 are run, validating admission controllers check the request post-mutation, merge is
 performed on `PATCH`, fields are defaulted, and schema validation occurs. The changes
 are not persisted to the underlying storage, but the final object which would have
-been persisted is still returned to the user, along with the normal status code.
+been persisted is still returned to the user, along with the usual status code.
 
 If the non-dry-run version of a request would trigger an admission controller that has
 side effects, the request will be failed rather than risk an unwanted side effect. All

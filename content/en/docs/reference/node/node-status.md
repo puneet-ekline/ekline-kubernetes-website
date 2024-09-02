@@ -7,7 +7,7 @@ weight: 80
 
 The status of a [node](/docs/concepts/architecture/nodes/) in Kubernetes is a critical
 aspect of managing a Kubernetes cluster. In this article, we'll cover the basics of
-monitoring and maintaining node status to ensure a healthy and stable cluster.
+monitoring and maintaining node status to ensure a functional and stable cluster.
 
 ## Node status fields
 
@@ -43,7 +43,7 @@ The `conditions` field describes the status of all `Running` nodes. Examples of 
 {{< table caption = "Node conditions, and a description of when each condition applies." >}}
 | Node Condition       | Description |
 |----------------------|-------------|
-| `Ready`              | `True` if the node is healthy and ready to accept pods, `False` if the node is not healthy and is not accepting pods, and `Unknown` if the node controller has not heard from the node in the last `node-monitor-grace-period` (default is 40 seconds) |
+| `Ready`              | `True` if the node is operational and ready to accept pods, `False` if the node is not operational and is not accepting pods, and `Unknown` if the node controller has not heard from the node in the last `node-monitor-grace-period` (default is 40 seconds) |
 | `DiskPressure`       | `True` if pressure exists on the disk size—that is, if the disk capacity is low; otherwise `False` |
 | `MemoryPressure`     | `True` if pressure exists on the node memory—that is, if the node memory is low; otherwise `False` |
 | `PIDPressure`        | `True` if pressure exists on the processes—that is, if there are too many processes on the node; otherwise `False` |
@@ -57,7 +57,7 @@ cordoned nodes are marked Unschedulable in their spec.
 {{< /note >}}
 
 In the Kubernetes API, a node's condition is represented as part of the `.status`
-of the Node resource. For example, the following JSON structure describes a healthy node:
+of the Node resource. For example, the following JSON structure describes a functional node
 
 ```json
 "conditions": [
@@ -95,7 +95,7 @@ number of pods that can be scheduled onto the node.
 
 The fields in the capacity block indicate the total amount of resources that a
 Node has. The allocatable block indicates the amount of resources on a
-Node that is available to be consumed by normal Pods.
+Node that is available to be consumed by Pods.
 
 You may read more about capacity and allocatable resources while learning how
 to [reserve compute resources](/docs/tasks/administer-cluster/reserve-compute-resources/#node-allocatable)

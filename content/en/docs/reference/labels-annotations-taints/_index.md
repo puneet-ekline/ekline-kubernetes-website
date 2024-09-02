@@ -1871,7 +1871,7 @@ The cloud controller manager integration with AWS elastic load balancing configu
 a load balancer based on this annotation. The annotation value is a comma-separated
 list of extra AWS VPC security groups to configure for the load balancer.
 
-### service.beta.kubernetes.io/aws-load-balancer-healthcheck-healthy-threshold (beta) {#service-beta-kubernetes-io-aws-load-balancer-healthcheck-healthy-threshold}
+### service.beta.kubernetes.io/aws-load-balancer-healthcheck-successful-threshold (beta) {#service-beta-kubernetes-io-aws-load-balancer-healthcheck-successful-threshold}
 
 Example: `service.beta.kubernetes.io/aws-load-balancer-healthcheck-healthy-threshold: "3"`
 
@@ -1879,7 +1879,7 @@ Used on: Service
 
 The cloud controller manager integration with AWS elastic load balancing configures
 a load balancer based on this annotation. The annotation value specifies the number of
-successive successful health checks required for a backend to be considered healthy
+successive successful health checks required for a backend to be considered in good condition
 for traffic.
 
 ### service.beta.kubernetes.io/aws-load-balancer-healthcheck-interval (beta) {#service-beta-kubernetes-io-aws-load-balancer-healthcheck-interval}

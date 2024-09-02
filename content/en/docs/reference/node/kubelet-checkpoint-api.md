@@ -79,7 +79,7 @@ POST /checkpoint/{namespace}/{pod}/{container}
 
 401: Unauthorized
 
-404: Not Found (if the `ContainerCheckpoint` feature gate is disabled)
+404: Not Found (if the `ContainerCheckpoint` feature gate is turned off)
 
 404: Not Found (if the specified `namespace`, `pod` or `container` cannot be found)
 

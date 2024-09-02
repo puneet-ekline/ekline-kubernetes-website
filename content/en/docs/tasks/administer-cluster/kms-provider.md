@@ -9,7 +9,7 @@ weight: 370
 <!-- overview -->
 This page shows how to configure a Key Management Service (KMS) provider and plugin to enable secret data encryption.
 In Kubernetes {{< skew currentVersion >}} there are two versions of KMS at-rest encryption.
-You should use KMS v2 if feasible because KMS v1 is deprecated (since Kubernetes v1.28) and disabled by default (since Kubernetes v1.29).
+You should use KMS v2 if feasible because KMS v1 is deprecated (since Kubernetes v1.28) and turned off by default (since Kubernetes v1.29).
 KMS v2 offers significantly better performance characteristics than KMS v1.
 
 {{< caution >}}
@@ -40,7 +40,7 @@ you have selected.  Kubernetes recommends using KMS v2.
 
 * Kubernetes version 1.10.0 or later is required
 
-* For version 1.29 and later, the v1 implementation of KMS is disabled by default.
+* For version 1.29 and later, the v1 implementation of KMS is turned off by default.
   To enable the feature, set `--feature-gates=KMSv1=true` to configure a KMS v1 provider.
 
 * Your cluster must use etcd v3 or later
@@ -167,8 +167,8 @@ Then use the functions and data structures in the stub file to develop the serve
   compatible with the stable `v2` KMS API. Kubernetes {{< skew currentVersion >}} also supports the
   `v2beta1` API for KMS; future Kubernetes releases are likely to continue supporting that beta version.
 
-  The API server polls the `Status` procedure call approximately every minute when everything is healthy,
-  and every 10 seconds when the plugin is not healthy.  Plugins must take care to optimize this call as it will be
+  The API server polls the `Status` procedure call approximately every minute when everything is functioning properly,
+  and every 10 seconds when the plugin is not functioning properly. Plugins must take care to optimize this call as it will be
   under constant load.
 
 * Encryption

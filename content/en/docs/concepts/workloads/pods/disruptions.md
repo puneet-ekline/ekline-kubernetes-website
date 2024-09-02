@@ -135,7 +135,7 @@ against the disruption budget, but workload resources (such as Deployment and St
 are not limited by PDBs when doing rolling upgrades. Instead, the handling of failures
 during application updates is configured in the spec for the specific workload resource.
 
-It is recommended to set `AlwaysAllow` [Unhealthy Pod Eviction Policy](/docs/tasks/run-application/configure-pdb/#unhealthy-pod-eviction-policy)
+It is recommended to set `AlwaysAllow` [Pod Eviction Policy](/docs/tasks/run-application/configure-pdb/#unhealthy-pod-eviction-policy)
 to your PodDisruptionBudgets to support eviction of misbehaving applications during a node drain.
 The default behavior is to wait for the application pods to become [healthy](/docs/tasks/run-application/configure-pdb/#healthiness-of-a-pod)
 before the drain can proceed.

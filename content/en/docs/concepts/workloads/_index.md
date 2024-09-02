@@ -20,7 +20,7 @@ Kubernetes pods have a [defined lifecycle](/docs/concepts/workloads/pods/pod-lif
 For example, once a pod is running in your cluster then a critical fault on the
 {{< glossary_tooltip text="node" term_id="node" >}} where that pod is running means that
 all the pods on that node fail. Kubernetes treats that level of failure as final: you
-would need to create a new Pod to recover, even if the node later becomes healthy.
+would need to create a new Pod to recover, even if the node later becomes operational.
 
 However, to make life considerably easier, you don't need to manage each Pod directly.
 Instead, you can use _workload resources_ that manage a set of pods on your behalf.

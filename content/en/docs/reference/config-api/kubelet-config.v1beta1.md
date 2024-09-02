@@ -490,7 +490,7 @@ Default: 10250</p>
 no authentication/authorization.
 The port number must be between 1 and 65535, inclusive.
 Setting this field to 0 disables the read-only service.
-Default: 0 (disabled)</p>
+Default: 0 (off)</p>
 </td>
 </tr>
 <tr><td><code>tlsCertFile</code><br/>
@@ -749,7 +749,7 @@ Default: &quot;2m&quot;</p>
    <p>imageMaximumGCAge is the maximum age an image can be unused before it is garbage collected.
 The default of this field is &quot;0s&quot;, which disables this field--meaning images won't be garbage
 collected based on being unused for too long.
-Default: &quot;0s&quot; (disabled)</p>
+Default: "0s" (not enabled)</p>
 </td>
 </tr>
 <tr><td><code>imageGCHighThresholdPercent</code><br/>
@@ -1449,7 +1449,7 @@ Default: &quot;0s&quot;</p>
 pods during a node shutdown. This should be less than shutdownGracePeriod.
 For example, if shutdownGracePeriod=30s, and shutdownGracePeriodCriticalPods=10s,
 during a node shutdown the first 20 seconds would be reserved for gracefully
-terminating normal pods, and the last 10 seconds would be reserved for terminating
+terminating typical pods, and the last 10 seconds would be reserved for terminating
 critical pods.
 Default: &quot;0s&quot;</p>
 </td>
@@ -1585,7 +1585,7 @@ as cpu and memory. It also allows setting sizeLimit for emptyDir volume, which w
 usage from the volume exceeds the limit.
 This feature depends on the capability of detecting correct root file system disk usage. For certain systems,
 such as kind rootless, if this capability cannot be supported, the feature LocalStorageCapacityIsolation should be
-disabled. Once disabled, user should not set request/limit for container's ephemeral storage, or sizeLimit for emptyDir.
+Once deactivated, user should not set request/limit for container's ephemeral storage, or sizeLimit for emptyDir.
 Default: true</p>
 </td>
 </tr>

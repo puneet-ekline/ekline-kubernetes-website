@@ -522,7 +522,7 @@ reduces the risk of a conflict over allocation.
 ## Traffic policies
 
 You can set the `.spec.internalTrafficPolicy` and `.spec.externalTrafficPolicy` fields
-to control how Kubernetes routes traffic to healthy (“ready”) backends.
+to control how Kubernetes routes traffic to (“ready”) backends.
 
 ### Internal traffic policy
 
@@ -544,13 +544,13 @@ are no node-local endpoints, the kube-proxy does not forward any traffic for the
 relevant Service.
 
 If `Cluster` is specified all nodes are eligible load balancing targets _as long as_
-the node is not being deleted and kube-proxy is healthy. In this mode: load balancer 
+the node is not being deleted and kube-proxy is functioning properly. In this mode: load balancer 
 health checks are configured to target the service proxy's readiness port and path.
 In the case of kube-proxy this evaluates to: `${NODE_IP}:10256/healthz`. kube-proxy
 will return either an HTTP code 200 or 503. kube-proxy's load balancer health check
 endpoint returns 200 if:
 
-1. kube-proxy is healthy, meaning:
+1. kube-proxy is functioning properly, meaning
    - it's able to progress programming the network and isn't timing out while doing
      so (the timeout is defined to be: **2 × `iptables.syncPeriod`**); and
 2. the node is not being deleted (there is no deletion timestamp set for the Node).
@@ -590,7 +590,7 @@ metrics publish two series, one with the 200 label and one with the 503 one.
 
 For `Local` Services: kube-proxy will return 200 if
 
-1. kube-proxy is healthy/ready, and
+1. kube-proxy is functioning/ready, and
 2. has a local endpoint on the node in question.
 
 Node deletion does **not** have an impact on kube-proxy's return
@@ -659,7 +659,7 @@ same-zone traffic. However, there are key differences in their approaches:
   proportionally across zones based on allocatable CPU resources. This heuristic
   includes safeguards (such as the [fallback
   behavior](/docs/concepts/services-networking/topology-aware-routing/#three-or-more-endpoints-per-zone)
-  for small numbers of endpoints) and could lead to the feature being disabled
+  for small numbers of endpoints) and could lead to the feature being turned off
   in certain scenarios for load-balancing reasons. This approach sacrifices some
   predictability in favor of potential load balancing.
 
@@ -696,7 +696,7 @@ interacts with them:
 ### Considerations for using traffic distribution control  
 
 * **Increased Probability of Overloaded Endpoints:** The `PreferClose`
-  heuristic will attempt to route traffic to the closest healthy endpoints
+  heuristic will attempt to route traffic to the closest available endpoints
   instead of spreading that traffic evenly across all endpoints. If you do not
   have a sufficient number of endpoints within a zone, they may become
   overloaded. This is especially likely if incoming traffic is not

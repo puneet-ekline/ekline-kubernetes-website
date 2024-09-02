@@ -528,7 +528,7 @@ JSONSchemaProps is a JSON-Schema following Specification Draft 4 (http://json-sc
 
 - **x-kubernetes-preserve-unknown-fields** (boolean)
 
-  x-kubernetes-preserve-unknown-fields stops the API server decoding step from pruning fields which are not specified in the validation schema. This affects fields recursively, but switches back to normal pruning behaviour if nested properties or additionalProperties are specified in the schema. This can either be true or undefined. False is forbidden.
+  x-kubernetes-preserve-unknown-fields stops the API server decoding step from pruning fields which are not specified in the validation schema. This affects fields recursively, but switches back to regular pruning behavior if nested properties or additionalProperties are specified in the schema. This can either be true or undefined. False is forbidden.
 
 - **x-kubernetes-validations** ([]ValidationRule)
 

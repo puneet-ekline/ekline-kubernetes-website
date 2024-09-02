@@ -432,7 +432,7 @@ To use seccomp profile defaulting, you must run the kubelet with the
 enabled for each node where you want to use it.
 
 If enabled, the kubelet will use the `RuntimeDefault` seccomp profile by default, which is
-defined by the container runtime, instead of using the `Unconfined` (seccomp disabled) mode.
+defined by the container runtime, instead of using the `Unconfined` (seccomp in permissive mode).
 The default profiles aim to provide a strong set
 of security defaults while preserving the functionality of the workload. It is
 possible that the default profiles differ between container runtimes and their
@@ -453,7 +453,7 @@ profile. To mitigate such a failure, you can:
 
 - Run the workload explicitly as `Unconfined`.
 - Disable the `SeccompDefault` feature for the nodes. Also making sure that
-  workloads get scheduled on nodes where the feature is disabled.
+  workloads get scheduled on nodes where the feature is turned off.
 - Create a custom seccomp profile for the workload.
 
 If you were introducing this feature into production-like cluster, the Kubernetes project

@@ -29,7 +29,7 @@ see the [Creating a cluster with kubeadm](/docs/setup/production-environment/too
 * Swap configuration. The default behavior of a kubelet was to fail to start if swap memory was detected on a node.
   See [Swap memory management](/docs/concepts/architecture/nodes/#swap-memory) for more details.
   * You **MUST** disable swap if the kubelet is not properly configured to use swap. For example, `sudo swapoff -a`
-    will disable swapping temporarily. To make this change persistent across reboots, make sure swap is disabled in
+    will disable swapping temporarily. To make this change persistent across reboots, make sure swap is turned off in
     config files like `/etc/fstab`, `systemd.swap`, depending how it was configured on your system.
 
 {{< note >}}

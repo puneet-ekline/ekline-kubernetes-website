@@ -136,7 +136,7 @@ to access `/debug/api_priority_and_fairness/` by specifying `nonResourceURLs`.
   - `RequestIndexInQueue`: The index in the queue for a given request. It will
     be -1 for executing requests.
   - `InitialSeats`: The number of seats will be occupied during the initial
-    (normal) stage of execution of the request.
+    (stage of execution of the request.
   - `FinalSeats`: The number of seats will be occupied during the final stage
     of request execution, accounting for the associated WATCH notifications.
   - `AdditionalLatency`: The extra time taken during the final stage of request
@@ -153,7 +153,7 @@ request in the API server log, and it includes the following attributes.
 - `apf_fs`: the name of the flow schema to which the request was classified.
 - `apf_pl`: the name of the priority level for that flow schema.
 - `apf_iseats`: the number of seats determined for the initial
-  (normal) stage of execution of the request.
+  (nominal) stage of execution of the request.
 - `apf_fseats`: the number of seats determined for the final stage of
   execution (accounting for the associated `watch` notifications) of the
   request.

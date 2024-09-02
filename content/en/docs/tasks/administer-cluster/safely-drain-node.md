@@ -33,7 +33,7 @@ If availability is important for any applications that run or could run on the n
 that you are draining, [configure a PodDisruptionBudgets](/docs/tasks/run-application/configure-pdb/)
 first and then continue following this guide.
 
-It is recommended to set `AlwaysAllow` [Unhealthy Pod Eviction Policy](/docs/tasks/run-application/configure-pdb/#unhealthy-pod-eviction-policy)
+It is recommended to set `AlwaysAllow` [Pod Eviction Policy](/docs/tasks/run-application/configure-pdb/#unhealthy-pod-eviction-policy)
 to your PodDisruptionBudgets to support eviction of misbehaving applications during a node drain.
 The default behavior is to wait for the application pods to become [healthy](/docs/tasks/run-application/configure-pdb/#healthiness-of-a-pod)
 before the drain can proceed.
@@ -109,7 +109,7 @@ respect the PodDisruptionBudget you specify.
 For example, if you have a StatefulSet with three replicas and have
 set a PodDisruptionBudget for that set specifying `minAvailable: 2`,
 `kubectl drain` only evicts a pod from the StatefulSet if all three
-replicas pods are [healthy](/docs/tasks/run-application/configure-pdb/#healthiness-of-a-pod);
+replicas pods are [functional](/docs/tasks/run-application/configure-pdb/#healthiness-of-a-pod);
 if then you issue multiple drain commands in parallel,
 Kubernetes respects the PodDisruptionBudget and ensures that
 only 1 (calculated as `replicas - minAvailable`) Pod is unavailable

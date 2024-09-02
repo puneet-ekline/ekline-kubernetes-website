@@ -48,7 +48,7 @@ client libraries:
 
 * [kubelet](/docs/reference/command-line-tools-reference/kubelet/) - The
   primary agent that runs on each node. The kubelet takes a set of PodSpecs
-  and ensures that the described containers are running and healthy.
+  and ensures that the described containers are running and functional.
 * [kube-apiserver](/docs/reference/command-line-tools-reference/kube-apiserver/) -
   REST API that validates and configures data for API objects such as  pods,
   services, replication controllers.

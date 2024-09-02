@@ -403,7 +403,7 @@ Some uses for a `hostPath` are:
   accessing those logs using a read-only mount of `/var/log`)
 * making a configuration file stored on the host system available read-only
   to a {{< glossary_tooltip text="static pod" term_id="static-pod" >}};
-  unlike normal Pods, static Pods cannot access ConfigMaps
+  unlike standard Pods, static Pods cannot access ConfigMaps
 
 #### `hostPath` volume types
 
@@ -569,7 +569,7 @@ provided:
 The volume gets re-resolved if the pod gets deleted and recreated, which means
 that new remote content will become available on pod recreation. A failure to
 resolve or pull the image during pod startup will block containers from starting
-and may add significant latency. Failures will be retried using normal volume
+and may add significant latency. Failures will be retried using standard volume
 backoff and will be reported on the pod reason and message.
 
 The types of objects that may be mounted by this volume are defined by the

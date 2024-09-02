@@ -490,9 +490,9 @@ The contents of ClusterTrustBundles can be injected into the container filesyste
 See the [clusterTrustBundle projected volume source](/docs/concepts/storage/projected-volumes#clustertrustbundle) for more details.
 
 <!-- TODO this should become a task page -->
-## How to issue a certificate for a user {#normal-user}
+## How to issue a certificate for a user {#user}
 
-A few steps are required in order to get a normal user to be able to
+A few steps are required in order to get a user to be able to
 authenticate and invoke an API. First, this user must have a certificate issued
 by the Kubernetes cluster, and then present that certificate to the Kubernetes API.
 

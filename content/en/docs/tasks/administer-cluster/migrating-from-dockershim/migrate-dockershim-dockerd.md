@@ -26,7 +26,7 @@ a third-party replacement, `cri-dockerd`, is available. The `cri-dockerd` adapte
 lets you use Docker Engine through the {{<glossary_tooltip term_id="cri" text="Container Runtime Interface">}}.
 
 {{<note>}}
-If you already use `cri-dockerd`, you aren't affected by the dockershim removal.
+If you already use `cri-dockerd`, the dockershim removal does not impact you.
 Before you begin, [Check whether your nodes use the dockershim](/docs/tasks/administer-cluster/migrating-from-dockershim/find-out-runtime-you-use/).
 {{</note>}}
 
@@ -38,7 +38,7 @@ node:
 1.  Cordon and drain the node.
 1.  Configure the kubelet to use `cri-dockerd`. 
 1.  Restart the kubelet.
-1.  Verify that the node is healthy.
+1.  Verify that the node is functioning properly.
 
 Test the migration on non-critical nodes first.
 
@@ -103,7 +103,7 @@ in the control plane. To modify this socket for each affected node:
 systemctl restart kubelet
 ```
 
-## Verify that the node is healthy
+## Verify that the node is functioning correctly
 
 To check whether the node uses the `cri-dockerd` endpoint, follow the
 instructions in [Find out which runtime you use](/docs/tasks/administer-cluster/migrating-from-dockershim/find-out-runtime-you-use/).

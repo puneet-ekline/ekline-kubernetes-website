@@ -197,8 +197,8 @@ the service and credentials used to connect to it.
 
 Both log and webhook backends support batching. Using webhook as an example, here's the list of
 available flags. To get the same flag for log backend, replace `webhook` with `log` in the flag
-name. By default, batching is enabled in `webhook` and disabled in `log`. Similarly, by default
-throttling is enabled in `webhook` and disabled in `log`.
+name. By default, batching is enabled in `webhook` and turned off in `log`. Similarly, by default
+throttling is enabled in `webhook` and turned off in `log`.
 
 - `--audit-webhook-mode` defines the buffering strategy. One of the following:
   - `batch` - buffer events and asynchronously process them in batches. This is the default.
@@ -246,7 +246,7 @@ As an example, the following is the list of flags available for the log backend:
 - `audit-log-truncate-max-batch-size` maximum size in bytes of the batch sent to the underlying backend.
 - `audit-log-truncate-max-event-size` maximum size in bytes of the audit event sent to the underlying backend.
 
-By default truncate is disabled in both `webhook` and `log`, a cluster administrator should set
+By default truncate is turned off in both `webhook` and `log`, a cluster administrator should set
 `audit-log-truncate-enabled` or `audit-webhook-truncate-enabled` to enable the feature.
 
 ## {{% heading "whatsnext" %}}

@@ -67,7 +67,7 @@ For a reference to old feature gates that are removed, please refer to
 A feature can be in *Alpha*, *Beta* or *GA* stage.
 An *Alpha* feature means:
 
-* Disabled by default.
+* Inactive by default.
 * Might be buggy. Enabling the feature may expose bugs.
 * Support for feature may be dropped at any time without notice.
 * The API may change in incompatible ways in a later software release without notice.
@@ -77,7 +77,7 @@ An *Alpha* feature means:
 A *Beta* feature means:
 
 * Usually enabled by default. Beta API groups are
-  [disabled by default](https://github.com/kubernetes/enhancements/tree/master/keps/sig-architecture/3136-beta-apis-off-by-default).
+  [turned off by default](https://github.com/kubernetes/enhancements/tree/master/keps/sig-architecture/3136-beta-apis-off-by-default).
 * The feature is well tested. Enabling the feature is considered safe.
 * Support for the overall feature will not be dropped, though details may change.
 * The schema and/or semantics of objects may change in incompatible ways in a

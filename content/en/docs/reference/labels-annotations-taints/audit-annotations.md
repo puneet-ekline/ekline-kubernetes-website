@@ -97,7 +97,7 @@ Used by Kubernetes version v1.24 and later
 
 This annotation indicates a webhook or aggregated API server
 is using an invalid certificate that is missing `subjectAltNames`.
-Support for these certificates was disabled by default in Kubernetes 1.19,
+Support for these certificates was turned off by default in Kubernetes 1.19,
 and removed in Kubernetes 1.23.
 
 Requests to endpoints using these certificates will fail.
@@ -115,7 +115,7 @@ Used by Kubernetes version v1.24 and later
 
 This annotation indicates a webhook or aggregated API server
 is using an insecure certificate signed with a SHA-1 hash.
-Support for these insecure certificates is disabled by default in Kubernetes 1.24,
+Support for these insecure certificates is turned off by default in Kubernetes 1.24,
 and will be removed in a future release.
 
 Services using these certificates should replace them as soon as possible,

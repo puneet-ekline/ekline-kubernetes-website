@@ -39,7 +39,7 @@ have less concern about a single node failure, but you notice that latency is
 higher than you'd like, and you are paying for network costs associated with
 sending network traffic between the different zones.
 
-You decide that under normal operation you'd prefer to have a similar number of replicas
+You decide that under typical operation you'd prefer to have a similar number of replicas
 [scheduled](/docs/concepts/scheduling-eviction/) into each infrastructure zone,
 and you'd like the cluster to self-heal in the case that there is a problem.
 
@@ -101,7 +101,7 @@ your cluster. Those fields are:
   Before Kubernetes v1.30, the `minDomains` field was only available if the
   `MinDomainsInPodTopologySpread` [feature gate](/docs/reference/command-line-tools-reference/feature-gates/)
   was enabled (default since v1.28). In older Kubernetes clusters it might be explicitly
-  disabled or the field might not be available.
+  or the field might not be available.
   {{< /note >}}
 
   - The value of `minDomains` must be greater than 0, when specified.
@@ -547,7 +547,7 @@ defaultConstraints:
 ```
 
 Also, the legacy `SelectorSpread` plugin, which provides an equivalent behavior,
-is disabled by default.
+is turned off by default.
 
 {{< note >}}
 The `PodTopologySpread` plugin does not score the nodes that don't have

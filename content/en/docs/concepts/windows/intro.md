@@ -245,7 +245,7 @@ The following list documents differences between how Pod specifications work bet
   see the [GitHub issue](https://github.com/moby/moby/issues/25982).
   The behavior today is that the ENTRYPOINT process is sent CTRL_SHUTDOWN_EVENT,
   then Windows waits 5 seconds by default, and finally shuts down
-  all processes using the normal Windows shutdown behavior. The 5
+  all processes using the standard Windows shutdown behavior. The 5
   second default is actually in the Windows registry
   [inside the container](https://github.com/moby/moby/issues/25982#issuecomment-426441183),
   so it can be overridden when the container is built.

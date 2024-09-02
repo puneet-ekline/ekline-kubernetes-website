@@ -147,7 +147,7 @@ You can use workload resources to create and manage multiple Pods for you. A con
 for the resource handles replication and rollout and automatic healing in case of
 Pod failure. For example, if a Node fails, a controller notices that Pods on that
 Node have stopped working and creates a replacement Pod. The scheduler places the
-replacement Pod onto a healthy Node.
+replacement Pod onto a ready Node.
 
 Here are some examples of workload resources that manage one or more Pods:
 

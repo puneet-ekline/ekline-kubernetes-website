@@ -480,7 +480,7 @@ as explained in this guide.
 
 Note that this also means that the automatic
 [kubelet client certificate rotation](/docs/tasks/tls/certificate-rotation/#enabling-client-certificate-rotation)
-will be disabled. If so, close to certificate expiration, you must generate
+will be deactivated. If so, close to certificate expiration, you must generate
 a new `kubelet.conf.csr`, sign the certificate, embed it in `kubelet.conf`
 and restart the kubelet.
 

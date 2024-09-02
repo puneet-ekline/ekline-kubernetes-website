@@ -581,7 +581,7 @@ kubectl delete pod myapp myapp-debug
 
 ### Copying a Pod while changing container images
 
-In some situations you may want to change a misbehaving Pod from its normal
+In some situations you may want to change a misbehaving Pod from its typical
 production container images to an image containing a debugging build or
 additional utilities.
 

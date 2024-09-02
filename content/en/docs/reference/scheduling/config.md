@@ -83,7 +83,7 @@ extension points:
 1. `postBind`: This is an informational extension point that is called after
    a Pod has been bound.
 1. `multiPoint`: This is a config-only field that allows plugins to be enabled
-   or disabled for all of their applicable extension points simultaneously.
+   or turned off for all of their applicable extension points simultaneously.
 
 For each extension point, you could disable specific [default plugins](#scheduling-plugins)
 or enable your own. For example:
@@ -103,7 +103,7 @@ profiles:
           weight: 1
 ```
 
-You can use `*` as name in the disabled array to disable all default plugins
+You can use `*` as name in the deactivated array to disable all default plugins
 for that extension point. This can also be used to rearrange plugins order, if
 desired.
 
@@ -188,7 +188,7 @@ plugins configured in its [extension points](#extension-points).
 
 With the following sample configuration, the scheduler will run with two
 profiles: one with the default plugins and one with all scoring plugins
-disabled.
+turned off.
 
 ```yaml
 apiVersion: kubescheduler.config.k8s.io/v1

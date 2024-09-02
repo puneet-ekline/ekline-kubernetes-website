@@ -219,7 +219,7 @@ Support for the Topology Manager policy options requires `TopologyManagerPolicyO
 
 You can toggle groups of options on and off based upon their maturity level using the following feature gates:
 * `TopologyManagerPolicyBetaOptions` default enabled. Enable to show beta-level options.
-* `TopologyManagerPolicyAlphaOptions` default disabled. Enable to show alpha-level options.
+* `TopologyManagerPolicyAlphaOptions` default inactive. Enable to show alpha-level options.
 
 You will still have to enable each option using the `TopologyManagerPolicyOptions` kubelet option.
 

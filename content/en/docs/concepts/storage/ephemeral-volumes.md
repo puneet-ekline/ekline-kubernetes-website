@@ -253,7 +253,7 @@ Cluster administrators must be aware of this. If this does not fit their securit
 they should use an [admission webhook](/docs/reference/access-authn-authz/extensible-admission-controllers/)
 that rejects objects like Pods that have a generic ephemeral volume.
 
-The normal [namespace quota for PVCs](/docs/concepts/policy/resource-quotas/#storage-resource-quota)
+The [namespace quota for PVCs](/docs/concepts/policy/resource-quotas/#storage-resource-quota)
 still applies, so even if users are allowed to use this new mechanism, they cannot use
 it to circumvent other policies.
 

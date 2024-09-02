@@ -155,10 +155,10 @@ description of the feature gate is also required; create a new Markdown file
 inside `content/en/docs/reference/command-line-tools-reference/feature-gates/`
 (use other files as a template).
 
-When you change a feature gate to disabled-by-default to enabled-by-default,
+When you change a feature gate from off-by-default to on-by-default,
 you may also need to change other documentation (not just the list of
 feature gates). Watch out for language such as ”The `exampleSetting` field
-is a beta field and disabled by default. You can enable it by enabling the
+is a beta field and turned off by default. You can enable it by enabling the
 `ProcessExampleThings` feature gate.”
 
 If your feature is GA'ed or deprecated, 

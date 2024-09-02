@@ -62,7 +62,7 @@ DeploymentSpec is the specification of the desired behavior of the Deployment.
 
 - **selector** (<a href="{{< ref "../common-definitions/label-selector#LabelSelector" >}}">LabelSelector</a>), required
 
-  Label selector for pods. Existing ReplicaSets whose pods are selected by this will be the ones affected by this deployment. It must match the pod template's labels.
+  Label selector for pods. Existing ReplicaSets whose pods are selected by this will be the ones modified by this deployment. It must match the pod template's labels.
 
 - **template** (<a href="{{< ref "../workload-resources/pod-template-v1#PodTemplateSpec" >}}">PodTemplateSpec</a>), required
 

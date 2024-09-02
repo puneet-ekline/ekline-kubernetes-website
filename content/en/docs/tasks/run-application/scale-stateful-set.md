@@ -27,7 +27,7 @@ increasing or decreasing the number of replicas.
   or [StatefulSet tutorial](/docs/tutorials/stateful-application/basic-stateful-set/) for further information.
 
 - You should perform scaling only when you are confident that your stateful application
-  cluster is completely healthy.
+  cluster is functioning optimally.
 
 <!-- steps -->
 
@@ -93,7 +93,7 @@ the transient error may interfere with your scale-up or scale-down operation. So
 databases have issues when nodes join and leave at the same time. It is better
 to reason about scaling operations at the application level in these cases, and
 perform scaling only when you are sure that your stateful application cluster is
-completely healthy.
+completely well.
 
 ## {{% heading "whatsnext" %}}
 

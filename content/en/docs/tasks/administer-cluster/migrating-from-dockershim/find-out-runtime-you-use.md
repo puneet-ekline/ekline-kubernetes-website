@@ -40,7 +40,7 @@ node-1       Ready    v1.16.15   docker://19.3.1
 node-2       Ready    v1.16.15   docker://19.3.1
 node-3       Ready    v1.16.15   docker://19.3.1
 ```
-If your runtime shows as Docker Engine, you still might not be affected by the
+If your runtime shows as Docker Engine, you might still encounter issues with the
 removal of dockershim in Kubernetes v1.24.
 [Check the runtime endpoint](#which-endpoint) to see if you use dockershim.
 If you don't use dockershim, you aren't affected. 
@@ -69,7 +69,7 @@ want to know whether you use Docker Engine with dockershim.
 
 {{<note>}}
 If you currently use Docker Engine in your nodes with `cri-dockerd`, you aren't
-affected by the dockershim removal.
+impacted by the dockershim removal.
 {{</note>}}
 
 You can check which socket you use by checking the kubelet configuration on your

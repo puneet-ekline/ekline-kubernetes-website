@@ -108,7 +108,7 @@ network connectivity and firewall. If your are using a cloud provider for deploy
 the cluster, check your cloud provider's health check status for the cluster's
 API server.
 
-Verify the status of the load balancer (if used) to ensure it is healthy and forwarding
+Verify the status of the load balancer (if used) to ensure it is running properly and forwarding
 traffic to the API server.
 
 ## TLS problems

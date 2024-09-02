@@ -142,7 +142,7 @@ For CoreDNS:
 kubectl logs --namespace=kube-system -l k8s-app=kube-dns
 ```
 
-Here is an example of a healthy CoreDNS log:
+Here is an example of a functional CoreDNS log
 
 ```
 .:53

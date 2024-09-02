@@ -178,7 +178,7 @@ authorization as the `/metrics` endpoint on the scheduler. You must use the
 
 You can explicitly turn off metrics via command line flag `--disabled-metrics`. This may be
 desired if, for example, a metric is causing a performance problem. The input is a list of
-disabled metrics (i.e. `--disabled-metrics=metric1,metric2`).
+deactivated metrics (i.e. --disabled-metrics=metric1,metric2).
 
 ## Metric cardinality enforcement
 

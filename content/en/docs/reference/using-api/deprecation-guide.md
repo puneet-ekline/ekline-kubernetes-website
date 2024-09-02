@@ -376,9 +376,9 @@ The **extensions/v1beta1** API version of PodSecurityPolicy is no longer served 
 
 ## What to do
 
-### Test with deprecated APIs disabled
+### Test with deprecated APIs turned off
 
-You can test your clusters by starting an API server with specific API versions disabled
+You can test your clusters by starting an API server with specific API versions turned off
 to simulate upcoming removals. Add the following flag to the API server startup arguments:
 
 `--runtime-config=<group>/<version>=false`

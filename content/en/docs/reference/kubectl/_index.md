@@ -91,7 +91,7 @@ If all three are found in-cluster authentication is assumed.
 
 To maintain backwards compatibility, if the `POD_NAMESPACE` environment variable is set
 during in-cluster authentication it will override the default namespace from the
-service account token. Any manifests or tools relying on namespace defaulting will be affected by this.
+service account token. Any manifests or tools relying on namespace defaulting will experience this change.
 
 **`POD_NAMESPACE` environment variable**
 

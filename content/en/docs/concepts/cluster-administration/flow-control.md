@@ -37,7 +37,7 @@ command execution or log tailing&mdash;are not subject to the API
 Priority and Fairness filter. This is also true for the
 `--max-requests-inflight` flag without the API Priority and Fairness
 feature enabled. API Priority and Fairness _does_ apply to **watch**
-requests. When API Priority and Fairness is disabled, **watch** requests
+requests. When API Priority and Fairness is turned off, **watch** requests
 are not subject to the `--max-requests-inflight` limit.
 {{< /caution >}}
 
@@ -96,7 +96,7 @@ handling, discussed below. Another way is to disable Priority and
 Fairness on server B entirely, using the techniques discussed above. A
 third way, which is the simplest to use when server B is not
 `kube-apisever`, is to build server B with Priority and Fairness
-disabled in the code.
+turned off in the code.
 
 ## Concepts
 
@@ -160,7 +160,7 @@ objects. API Priority and Fairness considers a **watch** request to be
 done with its seat once that initial burst of notifications, if any,
 is over.
 
-The normal notifications are sent in a concurrent burst to all
+The notifications are sent in a concurrent burst to all
 relevant **watch** response streams whenever the server is notified of an
 object create/update/delete. To account for this work, API Priority
 and Fairness considers every write request to spend some additional
@@ -609,7 +609,7 @@ poorly-behaved workloads that may be harming system health.
   nanosecond, of the utilization of a priority level's concurrency
   limit, broken down by `priority_level`. This utilization is the
   fraction (number of seats occupied) / (concurrency limit). This
-  metric considers all stages of execution (both normal and the extra
+  metric considers all stages of execution (both standard and the extra
   delay at the end of a write to cover for the corresponding
   notification work) of all requests except WATCHes; for those it
   considers only the initial stage that delivers notifications of
@@ -750,7 +750,7 @@ Keep in mind that queuing or rejected requests from APF could be induced by
 either an increase in the number of requests or an increase in latency for
 existing requests. For example, if requests that normally take 1s to execute
 start taking 60s, it is possible that APF will start rejecting requests because
-requests are occupying seats for a longer duration than normal due to this
+requests are occupying seats for a longer duration than usual due to this
 increase in latency. If APF starts rejecting requests across multiple priority
 levels without a significant change in workload, it is possible there is an
 underlying issue with control plane performance rather than the workload or APF

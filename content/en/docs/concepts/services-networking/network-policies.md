@@ -360,14 +360,14 @@ NetworkPolicy.
 {{< /note >}}
 
 When a new NetworkPolicy object is created, it may take some time for a network plugin
-to handle the new object. If a pod that is affected by a NetworkPolicy
+to handle the new object. If a pod that experiences an impact from a NetworkPolicy
 is created before the network plugin has completed NetworkPolicy handling,
 that pod may be started unprotected, and isolation rules will be applied when
 the NetworkPolicy handling is completed.
 
 Once the NetworkPolicy is handled by a network plugin,
 
-1. All newly created pods affected by a given NetworkPolicy will be isolated before they are started.
+1. All newly created pods to which a given NetworkPolicy applies will be isolated before they are started.
    Implementations of NetworkPolicy must ensure that filtering is effective throughout
    the Pod lifecycle, even from the very first instant that any container in that Pod is started.
    Because they are applied at Pod level, NetworkPolicies apply equally to init containers,

@@ -262,7 +262,7 @@ This is an incomplete list of things that could go wrong, and how to adjust your
     - existing pods and services should continue to work normally unless they depend on the Kubernetes API
 - API server backing storage lost
   - Results
-    - the kube-apiserver component fails to start successfully and become healthy
+    - the kube-apiserver component fails to start successfully and become operational
     - kubelets will not be able to reach it but will continue to run the same pods and provide the same service proxying
     - manual recovery or recreation of apiserver state necessary before apiserver is restarted
 - Supporting services (node controller, replication controller manager, scheduler, etc) VM shutdown or crashes

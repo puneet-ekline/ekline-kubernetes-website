@@ -102,7 +102,7 @@ corresponding [event](/docs/tasks/debug/debug-application/debug-running-pod/) fo
 error message.
 
 If no `runtimeClassName` is specified, the default RuntimeHandler will be used, which is equivalent
-to the behavior when the RuntimeClass feature is disabled.
+to the behavior when the RuntimeClass feature is turned off.
 
 ### CRI Configuration
 

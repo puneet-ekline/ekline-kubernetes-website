@@ -88,7 +88,7 @@ Port mapping is also supported, but for simplicity this example exposes
 port 80 of the container directly to the Service.
 {{< /note >}}
 
-1. Check that all nodes are healthy:
+1. Check that all nodes are functioning properly
 
     ```bash
     kubectl get nodes
@@ -174,7 +174,7 @@ to be able to set a value for `.spec.pod.os`.
 {{< /note >}}
 
 The scheduler does not use the value of `.spec.os.name` when assigning Pods to nodes. You should
-use normal Kubernetes mechanisms for
+use standard Kubernetes mechanisms for
 [assigning pods to nodes](/docs/concepts/scheduling-eviction/assign-pod-node/)
 to ensure that the control plane for your cluster places pods onto nodes that are running the
 appropriate operating system.

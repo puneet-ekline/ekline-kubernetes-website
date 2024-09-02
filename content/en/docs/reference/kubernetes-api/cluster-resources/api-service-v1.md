@@ -84,7 +84,7 @@ APIServiceSpec contains information for locating and communicating with a server
 
 - **service** (ServiceReference)
 
-  Service is a reference to the service for this API server.  It must communicate on port 443. If the Service is nil, that means the handling for the API groupversion is handled locally on this server. The call will simply delegate to the normal handler chain to be fulfilled.
+  Service is a reference to the service for this API server.  It must communicate on port 443. If the Service is nil, that means the handling for the API groupversion is handled locally on this server. The call will simply delegate to the standard handler chain to be fulfilled.
 
   <a name="ServiceReference"></a>
   *ServiceReference holds a reference to Service.legacy.k8s.io*

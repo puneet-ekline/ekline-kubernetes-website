@@ -1457,7 +1457,7 @@ allowed to sync concurrently.</p>
 <code>float32</code>
 </td>
 <td>
-   <p>nodeEvictionRate is the number of nodes per second on which pods are deleted in case of node failure when a zone is healthy</p>
+   <p>nodeEvictionRate is the number of nodes per second on which pods are deleted in case of node failure when a zone is functional</p>
 </td>
 </tr>
 <tr><td><code>SecondaryNodeEvictionRate</code> <B>[Required]</B><br/>
@@ -1645,7 +1645,7 @@ in a multi-node cluster.</p>
 <td>
    <p>terminatedPodGCThreshold is the number of terminated pods that can exist
 before the terminated pod garbage collector starts deleting terminated pods.
-If &lt;= 0, the terminated pod garbage collector is disabled.</p>
+If &lt;= 0, the terminated pod garbage collector is turned off.</p>
 </td>
 </tr>
 </tbody>

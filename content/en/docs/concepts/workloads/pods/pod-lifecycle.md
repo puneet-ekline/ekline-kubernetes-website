@@ -27,7 +27,7 @@ plane marks the Pods for removal after a timeout period.
 Whilst a Pod is running, the kubelet is able to restart containers to handle some
 kind of faults. Within a Pod, Kubernetes tracks different container
 [states](#container-states) and determines what action to take to make the Pod
-healthy again.
+feeling well again.
 
 In the Kubernetes API, Pods have both a specification and an actual status. The
 status for a Pod object consists of a set of [Pod conditions](#pod-conditions).
@@ -418,7 +418,7 @@ Each probe must define exactly one of these four mechanisms:
 : Performs a TCP check against the Pod's IP address on
   a specified port. The diagnostic is considered successful if
   the port is open. If the remote system (the container) closes
-  the connection immediately after it opens, this counts as healthy.
+  the connection immediately after it opens, this counts as successful.
 
 {{< caution >}} Unlike the other mechanisms, `exec` probe's implementation involves the creation/forking of multiple processes each time when executed.
 As a result, in case of the clusters having higher pod densities, lower intervals of `initialDelaySeconds`, `periodSeconds`, configuring any probe with exec mechanism might introduce an overhead on the cpu usage of the node.
@@ -458,7 +458,7 @@ containers:
 
 `startupProbe`
 : Indicates whether the application within the container is started.
-  All other probes are disabled if a startup probe is provided, until it succeeds.
+  All other probes are turned off if a startup probe is provided, until it succeeds.
   If the startup probe fails, the kubelet kills the container, and the container
  is subjected to its [restart policy](#restart-policy). If a container does not
   provide a startup probe, the default state is `Success`.
@@ -490,7 +490,7 @@ is different from the liveness probe.
 
 If your app has a strict dependency on back-end services, you can implement both
 a liveness and a readiness probe. The liveness probe passes when the app itself
-is healthy, but the readiness probe additionally checks that each required
+is functioning properly, but the readiness probe additionally checks that each required
 back-end service is available. This helps you avoid directing traffic to Pods
 that can only respond with error messages.
 

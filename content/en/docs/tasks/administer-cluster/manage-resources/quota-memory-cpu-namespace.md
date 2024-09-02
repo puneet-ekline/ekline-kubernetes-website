@@ -80,7 +80,7 @@ Create the Pod:
 kubectl apply -f https://k8s.io/examples/admin/resource/quota-mem-cpu-pod.yaml --namespace=quota-mem-cpu-example
 ```
 
-Verify that the Pod is running and that its (only) container is healthy:
+Verify that the Pod is running and that its (only) container is functioning properly
 
 ```shell
 kubectl get pod quota-mem-cpu-demo --namespace=quota-mem-cpu-example

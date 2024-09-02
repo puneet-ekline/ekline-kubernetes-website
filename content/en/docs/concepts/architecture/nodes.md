@@ -57,13 +57,13 @@ is valid. For example, if you try to create a Node from the following JSON manif
 
 Kubernetes creates a Node object internally (the representation). Kubernetes checks
 that a kubelet has registered to the API server that matches the `metadata.name`
-field of the Node. If the node is healthy (i.e. all necessary services are running),
+field of the Node. If the node is functioning properly (i.e. all necessary services are running),
 then it is eligible to run a Pod. Otherwise, that node is ignored for any cluster activity
-until it becomes healthy.
+until it becomes functional.
 
 {{< note >}}
 Kubernetes keeps the object for the invalid Node and continues checking to see whether
-it becomes healthy.
+it becomes well-being.
 
 You, or a {{< glossary_tooltip term_id="controller" text="controller">}}, must explicitly
 delete the Node object to stop that health checking.
@@ -246,10 +246,10 @@ connected. If your cluster does not span multiple cloud provider availability zo
 then the eviction mechanism does not take per-zone unavailability into account.
 
 A key reason for spreading your nodes across availability zones is so that the
-workload can be shifted to healthy zones when one entire zone goes down.
+workload can be shifted to operational zones when one entire zone goes down.
 Therefore, if all nodes in a zone are unhealthy, then the node controller evicts at
-the normal rate of `--node-eviction-rate`. The corner case is when all zones are
-completely unhealthy (none of the nodes in the cluster are healthy). In such a
+the rate of `--node-eviction-rate`. The corner case is when all zones are
+completely nonfunctional (none of the nodes in the cluster are operational). In such a
 case, the node controller assumes that there is some problem with connectivity
 between the control plane and the nodes, and doesn't perform any evictions.
 (If there has been an outage and some nodes reappear, the node controller does

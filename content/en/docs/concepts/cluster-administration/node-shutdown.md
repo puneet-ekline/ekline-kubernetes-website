@@ -81,7 +81,7 @@ and will need to be re-scheduled.
 For example, if `shutdownGracePeriod=30s`, and
 `shutdownGracePeriodCriticalPods=10s`, kubelet will delay the node shutdown by
 30 seconds. During the shutdown, the first 20 (30-10) seconds would be reserved
-for gracefully terminating normal pods, and the last 10 seconds would be
+for gracefully terminating pods, and the last 10 seconds would be
 reserved for terminating [critical pods](/docs/tasks/administer-cluster/guaranteed-scheduling-critical-addon-pods/#marking-pod-as-critical).
 
 {{< note >}}
@@ -251,7 +251,7 @@ In such circumstances, volumes on the node in question might encounter data corr
 The forced storage detach behaviour is optional; users might opt to use the "Non-graceful
 node shutdown" feature instead.
 
-Force storage detach on timeout can be disabled by setting the `disable-force-detach-on-timeout`
+Force storage detach on timeout can be turned off by setting the `disable-force-detach-on-timeout`
 config field in `kube-controller-manager`. Disabling the force detach on timeout feature means
 that a volume that is hosted on a node that is unhealthy for more than 6 minutes will not have
 its associated

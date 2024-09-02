@@ -29,7 +29,7 @@ The benefits of relying on the container runtime for this information as opposed
 collection with cAdvisor include:
 
 - Potential improved performance if the container runtime already collects this information
-  during normal operations. In this case, the data can be re-used instead of being aggregated
+  during operations. In this case, the data can be re-used instead of being aggregated
   again by the kubelet.
 
 - It further decouples the kubelet and the container runtime allowing collection of metrics for

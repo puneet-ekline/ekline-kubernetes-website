@@ -268,7 +268,7 @@ there are additional points below that you should be careful of.
 * A memory-backed `emptyDir` is useful because of its performance, but memory
   is generally much smaller in size and much higher in cost than other storage
   media, such as disks or SSDs.  Using large amounts of memory for `emptyDir`
-  volumes may affect the normal operation of your pod or of the whole node,
+  volumes may affect the typical operation of your pod or of the whole node,
   so should be used carefully.
 
 If you are administering a cluster or namespace, you can also set

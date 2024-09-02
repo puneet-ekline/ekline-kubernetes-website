@@ -245,9 +245,9 @@ This only works with resource drivers that don't use structured parameters.
 {{< /note >}}
 
 It is better to avoid bypassing the scheduler because a Pod that is assigned to a node
-blocks normal resources (RAM, CPU) that then cannot be used for other Pods
+blocks resources (RAM, CPU) that then cannot be used for other Pods
 while the Pod is stuck. To make a Pod run on a specific node while still going
-through the normal scheduling flow, create the Pod with a node selector that
+through the scheduling flow, create the Pod with a node selector that
 exactly matches the desired node:
 
 ```yaml
@@ -299,7 +299,7 @@ error: the server doesn't have a resource type "deviceclasses"
 
 A control plane controller is supported when it is possible to create a
 ResourceClaim where the `spec.controller` field is set. When the
-`DRAControlPlaneController` feature is disabled, that field automatically
+`DRAControlPlaneController` feature is turned off, that field automatically
 gets cleared when storing the ResourceClaim.
 
 The default configuration of kube-scheduler enables the "DynamicResources"

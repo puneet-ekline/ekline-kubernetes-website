@@ -125,7 +125,7 @@ To choose a text editor you can set the `KUBE_EDITOR` environment variable.
 systemctl start kubelet
 ```
 
-## Verify that the node is healthy
+## Verify that the node is functioning properly
 
 Run `kubectl get nodes -o wide` and containerd appears as the runtime for the node we just changed.
 
@@ -133,7 +133,7 @@ Run `kubectl get nodes -o wide` and containerd appears as the runtime for the no
 
 {{% thirdparty-content %}}
 
-If the node appears healthy, remove Docker.
+If the node appears functional, remove Docker.
 
 {{< tabs name="tab-remove-docker-engine" >}}
 {{% tab name="CentOS" %}}

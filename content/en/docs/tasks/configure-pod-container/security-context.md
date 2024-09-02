@@ -619,7 +619,7 @@ Note: If `containers[*].securityContext.appArmorProfile.type` is explicitly set
 to `RuntimeDefault`, then the Pod will not be admitted if AppArmor is not
 enabled on the Node. However if `containers[*].securityContext.appArmorProfile.type`
 is not specified, then the default (which is also `RuntimeDefault`) will only
-be applied if the node has AppArmor enabled. If the node has AppArmor disabled
+be applied if the node has AppArmor enabled. If the node has AppArmor not enabled
 the Pod will be admitted but the Container will not be restricted by the 
 `RuntimeDefault` profile.
 

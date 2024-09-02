@@ -207,7 +207,7 @@ a new image or image tag. `kubectl` supports several update operations, each of 
 to different scenarios.
 
 You can run multiple copies of your app, and use a _rollout_ to gradually shift the traffic to
-new healthy Pods. Eventually, all the running Pods would have the new software.
+new Pods. Eventually, all the running Pods would have the new software.
 
 This section of the page guides you through how to create and update applications with Deployments.
 

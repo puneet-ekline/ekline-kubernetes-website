@@ -65,7 +65,7 @@ In the configuration file, you can see that the Pod has a single `Container`.
 The `periodSeconds` field specifies that the kubelet should perform a liveness
 probe every 5 seconds. The `initialDelaySeconds` field tells the kubelet that it
 should wait 5 seconds before performing the first probe. To perform a probe, the
-kubelet executes the command `cat /tmp/healthy` in the target container. If the
+kubelet executes the command `cat /tmp/status` in the target container. If the
 command succeeds, it returns 0, and the kubelet considers the container to be alive and
 healthy. If the command returns a non-zero value, the kubelet kills the container
 and restarts it.
@@ -153,7 +153,7 @@ should wait 3 seconds before performing the first probe. To perform a probe, the
 kubelet sends an HTTP GET request to the server that is running in the container
 and listening on port 8080. If the handler for the server's `/healthz` path
 returns a success code, the kubelet considers the container to be alive and
-healthy. If the handler returns a failure code, the kubelet kills the container
+If the handler returns a failure code, the kubelet kills the container.
 and restarts it.
 
 Any code greater than or equal to 200 and less than 400 indicates success. Any
@@ -202,7 +202,7 @@ affect the HTTP liveness probe.
 
 A third type of liveness probe uses a TCP socket. With this configuration, the
 kubelet will attempt to open a socket to your container on the specified port.
-If it can establish a connection, the container is considered healthy, if it
+If it can establish a connection, the container is considered operational, if it
 can't it is considered a failure.
 
 {{% code_sample file="pods/probe/tcp-liveness-readiness.yaml" %}}
@@ -405,7 +405,7 @@ liveness and readiness checks:
   after having failed. Defaults to 1. Must be 1 for liveness and startup Probes.
   Minimum value is 1.
 * `failureThreshold`: After a probe fails `failureThreshold` times in a row, Kubernetes
-  considers that the overall check has failed: the container is _not_ ready/healthy/live.
+  considers that the overall check has failed: the container is _not_ ready/functional/live.
   Defaults to 3. Minimum value is 1.
   For the case of a startup or liveness probe, if at least `failureThreshold` probes have
   failed, Kubernetes treats the container as unhealthy and triggers a restart for that

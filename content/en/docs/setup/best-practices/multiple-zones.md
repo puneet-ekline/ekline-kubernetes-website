@@ -133,7 +133,7 @@ your setup can restore service if all the failure zones in a region go
 off-line at the same time. For example, do you rely on there being at least
 one node able to run Pods in a zone?  
 Make sure that any cluster-critical repair work does not rely
-on there being at least one healthy node in your cluster. For example: if all nodes
+on there being at least one functioning node in your cluster. For example: if all nodes
 are unhealthy, you might need to run a repair Job with a special
 {{< glossary_tooltip text="toleration" term_id="toleration" >}} so that the repair
 can complete enough to bring at least one node into service.

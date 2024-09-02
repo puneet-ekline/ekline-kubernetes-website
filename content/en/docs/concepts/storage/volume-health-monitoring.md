@@ -44,7 +44,7 @@ condition is detected on a CSI volume. In addition, Volume Health information
 is exposed as Kubelet VolumeStats metrics. A new metric kubelet_volume_stats_health_status_abnormal
 is added. This metric includes two labels: `namespace` and `persistentvolumeclaim`.
 The count is either 1 or 0. 1 indicates the volume is unhealthy, 0 indicates volume
-is healthy. For more information, please check
+is well-being. For more information, please check
 [KEP](https://github.com/kubernetes/enhancements/tree/master/keps/sig-storage/1432-volume-health-monitor#kubelet-metrics-changes).
 
 {{< note >}}

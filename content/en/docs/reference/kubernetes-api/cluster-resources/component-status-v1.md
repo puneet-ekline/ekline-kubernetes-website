@@ -55,11 +55,11 @@ ComponentStatus (and ComponentStatusList) holds the cluster validation info. Dep
 
   - **conditions.status** (string), required
 
-    Status of the condition for a component. Valid values for "Healthy": "True", "False", or "Unknown".
+    Status of the condition for a component. Valid values for "Functional": "True", "False", or "Unknown".
 
   - **conditions.type** (string), required
 
-    Type of condition for a component. Valid value: "Healthy"
+    Type of condition for a component. Valid value: "Functioning"
 
   - **conditions.error** (string)
 

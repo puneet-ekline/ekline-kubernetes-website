@@ -189,7 +189,7 @@ simply as *nodes*).
 - *Set up node health checks*: For important workloads, you want to make sure
   that the nodes and pods running on those nodes are healthy. Using the
   [Node Problem Detector](/docs/tasks/debug/debug-cluster/monitor-node-health/)
-  daemon, you can ensure your nodes are healthy.
+  daemon, you can ensure your nodes are functioning properly.
 
 ## Production user management
 

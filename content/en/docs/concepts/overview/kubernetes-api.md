@@ -295,7 +295,7 @@ experimental APIs.
 
 To make it easier to evolve and to extend its API, Kubernetes implements
 [API groups](/docs/reference/using-api/#api-groups) that can be
-[enabled or disabled](/docs/reference/using-api/#enabling-or-disabling).
+[enabled or turned off](/docs/reference/using-api/#enabling-or-disabling).
 
 API resources are distinguished by their API group, resource type, namespace
 (for namespaced resources), and name. The API server handles the conversion between

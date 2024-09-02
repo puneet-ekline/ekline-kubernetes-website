@@ -60,7 +60,7 @@ In the Job status, the following conditions display:
   condition. The Job controller adds this condition after all of the Job's Pods
   are terminated.
 
-For comparison, if the Pod failure policy was disabled it would take 6 retries
+For comparison, if the Pod failure policy was turned off it would take 6 retries
 of the Pod, taking at least 2 minutes.
 
 ### Clean up
@@ -121,7 +121,7 @@ node while the Pod is running on it (within 90s since the Pod is scheduled).
 
 The Job resumes and succeeds.
 
-For comparison, if the Pod failure policy was disabled the Pod disruption would
+For comparison, if the Pod failure policy was turned off the Pod disruption would
 result in terminating the entire Job (as the `.spec.backoffLimit` is set to 0).
 
 ### Cleaning up

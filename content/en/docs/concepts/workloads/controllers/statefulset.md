@@ -205,7 +205,7 @@ by the `serviceName` field on the StatefulSet.
 Depending on how DNS is configured in your cluster, you may not be able to look up the DNS
 name for a newly-run Pod immediately. This behavior can occur when other clients in the
 cluster have already sent queries for the hostname of the Pod before it was created.
-Negative caching (normal in DNS) means that the results of previous failed lookups are
+Negative caching (common in DNS) means that the results of previous failed lookups are
 remembered and reused, even after the Pod is running, for at least a few seconds.
 
 If you need to discover Pods promptly after they are created, you have a few options:
@@ -405,7 +405,7 @@ For each policy that you can configure, you can set the value to either `Delete`
 
 `Delete`
 : The PVCs created from the StatefulSet `volumeClaimTemplate` are deleted for each Pod
-  affected by the policy. With the `whenDeleted` policy all PVCs from the
+  impacted by the policy. With the `whenDeleted` policy all PVCs from the
   `volumeClaimTemplate` are deleted after their Pods have been deleted. With the
   `whenScaled` policy, only PVCs corresponding to Pod replicas being scaled down are
   deleted, after their Pods have been deleted.

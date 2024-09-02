@@ -141,7 +141,7 @@ The pod accessing Docker may be named like:
 The SignalFx Smart Agent (deprecated) uses several different monitors for Kubernetes including
 `kubernetes-cluster`, `kubelet-stats/kubelet-metrics`, and `docker-container-stats`.
 The `kubelet-stats` monitor was previously deprecated by the vendor, in favor of `kubelet-metrics`.
-The `docker-container-stats` monitor is the one affected by dockershim removal.
+The `docker-container-stats` monitor is impacted by dockershim removal.
 Do not use the `docker-container-stats` with container runtimes other than Docker Engine.
 
 

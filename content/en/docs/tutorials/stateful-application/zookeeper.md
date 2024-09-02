@@ -738,7 +738,7 @@ container when the process implementing the application's business logic fails.
 ### Testing for liveness
 
 Configuring your application to restart failed processes is not enough to
-keep a distributed system healthy. There are scenarios where
+keep a distributed system functioning optimally. There are scenarios where
 a system's processes can be both alive and unresponsive, or otherwise
 unhealthy. You should use liveness probes to notify Kubernetes
 that your application's processes are unhealthy and it should restart them.
@@ -802,7 +802,7 @@ zk-0      1/1       Running   1         1h
 ### Testing for readiness
 
 Readiness is not the same as liveness. If a process is alive, it is scheduled
-and healthy. If a process is ready, it is able to process input. Liveness is
+and functional. If a process is ready, it is able to process input. Liveness is
 a necessary, but not sufficient, condition for readiness. There are cases,
 particularly during initialization and termination, when a process can be
 alive but not ready.
@@ -825,13 +825,13 @@ probe from the `zookeeper.yaml` manifest is identical to the liveness probe.
 ```
 
 Even though the liveness and readiness probes are identical, it is important
-to specify both. This ensures that only healthy servers in the ZooKeeper
+to specify both. This ensures that only functioning servers in the ZooKeeper
 ensemble receive network traffic.
 
 ## Tolerating Node failure
 
 ZooKeeper needs a quorum of servers to successfully commit mutations
-to data. For a three server ensemble, two servers must be healthy for
+to data. For a three server ensemble, two servers must be operational for
 writes to succeed. In quorum based systems, members are deployed across failure
 domains to ensure availability. To avoid an outage, due to the loss of an
 individual machine, best practices preclude co-locating multiple instances of the

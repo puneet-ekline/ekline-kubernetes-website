@@ -96,7 +96,7 @@ There are no current plans for a major version revision of Kubernetes that remov
 {{< note >}}
 Until [#52185](https://github.com/kubernetes/kubernetes/issues/52185) is
 resolved, no API versions that have been persisted to storage may be removed.
-Serving REST endpoints for those versions may be disabled (subject to the
+Serving REST endpoints for those versions may be turned off (subject to the
 deprecation timelines in this document), but the API server must remain capable
 of decoding/converting previously persisted data from storage.
 {{< /note >}}
@@ -408,8 +408,8 @@ and removed after a feature becomes GA or is dropped.
 As a feature moves through the stages, the associated feature gate evolves.
 The feature life cycle matched to its corresponding feature gate is:
 
-  * Alpha: the feature gate is disabled by default and can be enabled by the user.
-  * Beta: the feature gate is enabled by default and can be disabled by the user.
+  * Alpha: the feature gate is turned off by default and can be enabled by the user.
+  * Beta: the feature gate is enabled by default and can be turned off by the user.
   * GA: the feature gate is deprecated (see ["Deprecation"](#deprecation)) and becomes
   non-operational.
   * GA, deprecation window complete: the feature gate is removed and calls to it are
@@ -431,7 +431,7 @@ When removing a feature gate for a GA feature also requires considerable time, c
 feature gates may remain operational if the feature gate has no effect on the feature,
 and if the feature gate causes no errors.
 
-Features intended to be disabled by users should include a mechanism for disabling the
+Features intended to be turned off by users should include a mechanism for turning off the
 feature in the associated feature gate.
 
 Versioning for feature gates is different from the previously discussed components,

@@ -341,7 +341,7 @@ Beta metrics observe a looser API contract than its stable counterparts. No labe
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">execute</span><span class="metric_label">flow_schema</span><span class="metric_label">priority_level</span></li></ul>
 	</div><div class="metric" data-stability="beta">
 	<div class="metric_name">disabled_metrics_total</div>
-	<div class="metric_help">The count of disabled metrics.</div>
+	<div class="metric_help">The count of inactive metrics.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">BETA</span></li>
 	<li data-type="counter"><label class="metric_detail">Type:</label> <span class="metric_type">Counter</span></li>
@@ -488,7 +488,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">code</span><span class="metric_label">name</span><span class="metric_label">operation</span><span class="metric_label">rejected</span><span class="metric_label">type</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">apiserver_audit_error_total</div>
-	<div class="metric_help">Counter of audit events that failed to be audited properly. Plugin identifies the plugin affected by the error.</div>
+	<div class="metric_help">Counter of audit events that failed to be audited properly. Plugin identifies the plugin experiencing the error.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
 	<li data-type="counter"><label class="metric_detail">Type:</label> <span class="metric_type">Counter</span></li>
@@ -2371,7 +2371,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">namespace</span><span class="metric_label">persistentvolumeclaim</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">kubelet_volume_stats_health_status_abnormal</div>
-	<div class="metric_help">Abnormal volume health status. The count is either 1 or 0. 1 indicates the volume is unhealthy, 0 indicates volume is healthy</div>
+	<div class="metric_help">Abnormal volume health status. The count is either 1 or 0. 1 indicates the volume is abnormal, 0 indicates volume is normal</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
 	<li data-type="custom"><label class="metric_detail">Type:</label> <span class="metric_type">Custom</span></li>
@@ -2581,7 +2581,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	</ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">node_collector_zone_health</div>
-	<div class="metric_help">Gauge measuring percentage of healthy nodes per zone.</div>
+	<div class="metric_help">Gage measuring percentage of functional nodes per zone.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
 	<li data-type="gauge"><label class="metric_detail">Type:</label> <span class="metric_type">Gauge</span></li>
@@ -2679,7 +2679,7 @@ Alpha metrics do not have any API guarantees. These metrics must be used at your
 	<li class="metric_labels_varying"><label class="metric_detail">Labels:</label><span class="metric_label">namespace</span><span class="metric_label">reason</span></li></ul>
 	</div><div class="metric" data-stability="alpha">
 	<div class="metric_name">pod_security_errors_total</div>
-	<div class="metric_help">Number of errors preventing normal evaluation. Non-fatal errors may result in the latest restricted profile being used for evaluation.</div>
+	<div class="metric_help">Number of errors preventing standard evaluation. Non-fatal errors may result in the latest restricted profile being used for evaluation.</div>
 	<ul>
 	<li><label class="metric_detail">Stability Level:</label><span class="metric_stability_level">ALPHA</span></li>
 	<li data-type="counter"><label class="metric_detail">Type:</label> <span class="metric_type">Counter</span></li>

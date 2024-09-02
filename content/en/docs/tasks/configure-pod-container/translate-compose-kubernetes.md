@@ -453,7 +453,7 @@ The `kompose.service.type` label should be defined with `ports` only, otherwise 
 
 ## Restart
 
-If you want to create normal pods without controllers you can use `restart` construct of docker-compose to define that. Follow table below to see what happens on the `restart` value.
+If you want to create pods without controllers you can use `restart` construct of docker-compose to define that. Follow table below to see what happens on the `restart` value.
 
 | `docker-compose` `restart` | object created    | Pod `restartPolicy` |
 |----------------------------|-------------------|---------------------|

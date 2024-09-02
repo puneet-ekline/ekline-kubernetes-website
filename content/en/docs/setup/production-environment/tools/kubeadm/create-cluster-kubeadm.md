@@ -82,7 +82,7 @@ If you have already installed kubeadm, see the first two steps of the
 [Upgrading Linux nodes](/docs/tasks/administer-cluster/kubeadm/upgrading-linux-nodes) document for instructions on how to upgrade kubeadm.
 
 When you upgrade, the kubelet restarts every few seconds as it waits in a crashloop for
-kubeadm to tell it what to do. This crashloop is expected and normal.
+kubeadm to tell it what to do. This crashloop is expected.
 After you initialize your control-plane, the kubelet runs normally.
 {{< /note >}}
 
@@ -493,7 +493,7 @@ case, you can copy the `admin.conf` file to be accessible by some other user
 and `scp` using that other user instead.
 
 The `admin.conf` file gives the user _superuser_ privileges over the cluster.
-This file should be used sparingly. For normal users, it's recommended to
+This file should be used sparingly. For most users, it's recommended to
 generate an unique credential to which you grant privileges. You can do
 this with the `kubeadm kubeconfig user --client-name <CN>`
 command. That command will print out a KubeConfig file to STDOUT which you

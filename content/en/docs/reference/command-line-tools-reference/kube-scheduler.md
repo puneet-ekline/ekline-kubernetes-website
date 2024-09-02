@@ -152,11 +152,11 @@ kube-scheduler [flags]
 <td colspan="2">--disable-http2-serving</td>
 </tr>
 <tr>
-<td></td><td style="line-height: 130%; word-wrap: break-word;"><p>If true, HTTP2 serving will be disabled [default=false]</p></td>
+<td></td><td style="line-height: 130%; word-wrap: break-word;"><p>If true, HTTP2 serving will be turned off [default=false]</p></td>
 </tr>
 
 <tr>
-<td colspan="2">--disabled-metrics strings</td>
+<td colspan="2">--excluded-metrics strings</td>
 </tr>
 <tr>
 <td></td><td style="line-height: 130%; word-wrap: break-word;"><p>This flag provides an escape hatch for misbehaving metrics. You must provide the fully qualified metric name in order to disable it. Disclaimer: disabling metrics is higher in precedence than showing hidden metrics.</p></td>

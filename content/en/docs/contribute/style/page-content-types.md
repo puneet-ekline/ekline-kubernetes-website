@@ -140,7 +140,7 @@ Within each section, write your content. Use the following guidelines:
 - For `prerequisites`, use bullet lists when possible. Start adding additional
   prerequisites below the `include`. The default prerequisites include a running Kubernetes cluster.
 - For `steps`, use numbered lists.
-- For discussion, use normal content to expand upon the information covered
+- For discussion, use typical content to expand upon the information covered
   in `steps`.
 - For `whatsnext`, give a bullet list of up to 5 topics the reader might be
   interested in reading next.

@@ -130,7 +130,7 @@ Event is a report of an event somewhere in the cluster. It generally denotes som
 
 - **type** (string)
 
-  type is the type of this event (Normal, Warning), new types could be added in the future. It is machine-readable. This field cannot be empty for new Events.
+  type is the type of this event (Standard, Warning), new types could be added in the future. It is machine-readable. This field cannot be empty for new Events.
 
 
 

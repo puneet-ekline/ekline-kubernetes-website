@@ -133,7 +133,7 @@ hostnames-632524106-tlaok
 ```
 
 If you are not getting the responses you expect at this point, your Pods
-might not be healthy or might not be listening on the port you think they are.
+might not be functioning properly or might not be listening on the port you think they are.
 You might find `kubectl logs` to be useful for seeing what is happening, or
 perhaps you need to `kubectl exec` directly into your Pods and debug from
 there.

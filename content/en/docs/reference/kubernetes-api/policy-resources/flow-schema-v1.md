@@ -62,7 +62,7 @@ FlowSchemaSpec describes how the FlowSchema's specification looks like.
 
 - **distinguisherMethod** (FlowDistinguisherMethod)
 
-  `distinguisherMethod` defines how to compute the flow distinguisher for requests that match this schema. `nil` specifies that the distinguisher is disabled and thus will always be the empty string.
+  `distinguisherMethod` defines how to compute the flow distinguisher for requests that match this schema. `nil` specifies that the distinguisher is turned off and thus will always be the empty string.
 
   <a name="FlowDistinguisherMethod"></a>
   *FlowDistinguisherMethod specifies the method of a flow distinguisher.*
@@ -99,7 +99,7 @@ FlowSchemaSpec describes how the FlowSchema's specification looks like.
 
     *Atomic: will be replaced during a merge*
     
-    subjects is the list of normal user, serviceaccount, or group that this rule cares about. There must be at least one member in this slice. A slice that includes both the system:authenticated and system:unauthenticated user groups matches every request. Required.
+    subjects is the list of users, serviceaccounts, or groups that this rule cares about. There must be at least one member in this slice. A slice that includes both the system:authenticated and system:unauthenticated user groups matches every request. Required.
 
     <a name="Subject"></a>
     *Subject matches the originator of a request, as identified by the request authentication system. There are three ways of matching an originator; by user, group, or service account.*

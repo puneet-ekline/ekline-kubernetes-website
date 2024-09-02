@@ -322,7 +322,7 @@ liveness and readiness, you can use the SRV records of the Pods (
 application will be able to discover the Pods' addresses when they transition
 to Running and Ready.
 
-If your application wants to find any healthy Pod in a StatefulSet,
+If your application wants to find any available Pod in a StatefulSet,
 and therefore does not need to track each specific Pod,
 you could also connect to the IP address of a `type: ClusterIP` Service,
 backed by the Pods in that StatefulSet. You can use the same Service that
@@ -653,7 +653,7 @@ that Pod's existing version.
 Pods that have already received the update will be restored to the updated version,
 and Pods that have not yet received the update will be restored to the previous
 version. In this way, the controller attempts to continue to keep the application
-healthy and the update consistent in the presence of intermittent failures.
+and the update consistent in the presence of intermittent failures.
 
 Get the Pods to view their container images:
 
@@ -1183,7 +1183,7 @@ version of your application, happen in the strict order of the ordinal (pod numb
 In other words, if you have Pods `app-0`, `app-1` and `app-2`, Kubernetes will update `app-0` first and check it.
 Once the checks are good, Kubernetes updates `app-1` and finally `app-2`.
 
-If you added two more Pods, Kubernetes would set up `app-3` and wait for that to become healthy before deploying
+If you added two more Pods, Kubernetes would set up `app-3` and wait for that to become ready before deploying
 `app-4`.
 
 Because this is the default setting, you've already practised using it.

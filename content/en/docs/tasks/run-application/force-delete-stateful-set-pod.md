@@ -24,7 +24,7 @@ and explains the considerations to keep in mind when doing so.
 
 ## StatefulSet considerations
 
-In normal operation of a StatefulSet, there is **never** a need to force delete a StatefulSet Pod.
+In typical operation of a StatefulSet, there is **never** a need to force delete a StatefulSet Pod.
 The [StatefulSet controller](/docs/concepts/workloads/controllers/statefulset/) is responsible for
 creating, scaling and deleting members of the StatefulSet. It tries to ensure that the specified
 number of Pods from ordinal 0 through N-1 are alive and ready. StatefulSet ensures that, at any time,

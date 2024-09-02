@@ -487,7 +487,7 @@ Conditions:
 Events:
 ```
 
-For this HorizontalPodAutoscaler, you can see several conditions in a healthy state.  The first,
+For this HorizontalPodAutoscaler, you can see several conditions in a stable state.  The first,
 `AbleToScale`, indicates whether or not the HPA is able to fetch and update scales, as well as
 whether or not any backoff-related conditions would prevent scaling.  The second, `ScalingActive`,
 indicates whether or not the HPA is enabled (i.e. the replica count of the target is not zero) and

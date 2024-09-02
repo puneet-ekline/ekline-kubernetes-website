@@ -53,7 +53,7 @@ After you have made this change, you can run
 kubectl get pods -n kube-system | grep kube-scheduler
 ```
 
-to verify that the kube-scheduler component is healthy.
+to verify that the kube-scheduler component is functioning properly.
 
 ## Node scoring threshold {#percentage-of-nodes-to-score}
 

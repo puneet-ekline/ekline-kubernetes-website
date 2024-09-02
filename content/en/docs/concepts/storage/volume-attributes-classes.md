@@ -20,7 +20,7 @@ A VolumeAttributesClass provides a way for administrators to describe the mutabl
 "classes" of storage they offer. Different classes might map to different quality-of-service levels.
 Kubernetes itself is un-opinionated about what these classes represent.
 
-This is a beta feature and disabled by default.
+This is a beta feature and turned off by default.
 
 If you want to test the feature whilst it's beta, you need to enable the `VolumeAttributesClass`
 [feature gate](/docs/reference/command-line-tools-reference/feature-gates/) for the kube-controller-manager, kube-scheduler,

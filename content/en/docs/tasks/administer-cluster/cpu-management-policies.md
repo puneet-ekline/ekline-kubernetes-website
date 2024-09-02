@@ -260,7 +260,7 @@ equal to one. The `nginx` container is granted 2 exclusive CPUs.
 You can toggle groups of options on and off based upon their maturity level
 using the following feature gates:
 * `CPUManagerPolicyBetaOptions` default enabled. Disable to hide beta-level options.
-* `CPUManagerPolicyAlphaOptions` default disabled. Enable to show alpha-level options.
+* `CPUManagerPolicyAlphaOptions` default inactive. Enable to show alpha-level options.
 You will still have to enable each option using the `CPUManagerPolicyOptions` kubelet option.
 
 The following policy options exist for the static `CPUManager` policy:
@@ -288,7 +288,7 @@ similar synchronization primitives), as this type of code tends to run only as
 fast as its slowest worker (which is slowed down by the fact that fewer CPUs
 are available on at least one NUMA node).
 By distributing CPUs evenly across NUMA nodes, application developers can more
-easily ensure that no single worker suffers from NUMA effects more than any
+easily ensure that no single worker experiences NUMA effects more than any
 other, improving the overall performance of these types of applications.
 
 If the `align-by-socket` policy option is specified, CPUs will be considered

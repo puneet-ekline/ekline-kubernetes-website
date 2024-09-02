@@ -33,7 +33,7 @@ The upgrade workflow at high level is the following:
 - The cluster should use a static control plane and etcd pods or external etcd.
 - Make sure to back up any important components, such as app-level state stored in a database.
   `kubeadm upgrade` does not touch your workloads, only components internal to Kubernetes, but backups are always a best practice.
-- [Swap must be disabled](https://serverfault.com/questions/684771/best-way-to-disable-swap-in-linux).
+- [Swap must be turned off](https://serverfault.com/questions/684771/best-way-to-disable-swap-in-linux).
 
 ### Additional information
 
@@ -315,7 +315,7 @@ these backup files will need to be cleared manually.
 - Checks that your cluster is in an upgradeable state:
   - The API server is reachable
   - All nodes are in the `Ready` state
-  - The control plane is healthy
+  - The control plane is functioning properly
 - Enforces the version skew policies.
 - Makes sure the control plane images are available or available to pull to the machine.
 - Generates replacements and/or uses user supplied overwrites if component configs require version upgrades.

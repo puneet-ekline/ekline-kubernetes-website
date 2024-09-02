@@ -848,11 +848,11 @@ global PercentageOfNodesToScore will be used.</p>
 <a href="#kubescheduler-config-k8s-io-v1-Plugins"><code>Plugins</code></a>
 </td>
 <td>
-   <p>Plugins specify the set of plugins that should be enabled or disabled.
+   <p>Plugins specify the set of plugins that should be enabled or deactivated.
 Enabled plugins are the ones that should be enabled in addition to the
-default plugins. Disabled plugins are any of the default plugins that
-should be disabled.
-When no enabled or disabled plugin is specified for an extension point,
+default plugins. Deactivated plugins are any of the default plugins that
+should be turned off.
+When no enabled or non-enabled plugin is specified for an extension point,
 default plugins for that extension point will be used if there is any.
 If a QueueSort plugin is specified, the same QueueSort Plugin and
 PluginConfig must be specified for all profiles.</p>
@@ -946,7 +946,7 @@ It is up to the plugin to process these Args.</p>
 - [Plugins](#kubescheduler-config-k8s-io-v1-Plugins)
 
 
-<p>PluginSet specifies enabled and disabled plugins for an extension point.
+<p>PluginSet specifies enabled and unavailable plugins for an extension point.
 If an array is empty, missing, or nil, default plugins at that extension point will be used.</p>
 
 
@@ -969,8 +969,8 @@ These are called after default plugins and in the same order specified here.</p>
 <a href="#kubescheduler-config-k8s-io-v1-Plugin"><code>[]Plugin</code></a>
 </td>
 <td>
-   <p>Disabled specifies default plugins that should be disabled.
-When all default plugins need to be disabled, an array containing only one &quot;*&quot; should be provided.</p>
+   <p>Disables specifies default plugins that should be disabled.
+When all default plugins need to be turned off, an array containing only one &quot;*&quot; should be provided.</p>
 </td>
 </tr>
 </tbody>
@@ -988,7 +988,7 @@ When all default plugins need to be disabled, an array containing only one &quot
 a particular extension point are the only ones enabled. If an extension point is
 omitted from the config, then the default set of plugins is used for that extension point.
 Enabled plugins are called in the order specified here, after default plugins. If they need to
-be invoked before default plugins, default plugins must be disabled and re-enabled here in desired order.</p>
+be invoked before default plugins, default plugins must be turned off and re-enabled here in desired order.</p>
 
 
 <table class="table">
@@ -1090,7 +1090,7 @@ The scheduler call these plugins in order. Scheduler skips the rest of these plu
 Plugins enabled through MultiPoint will automatically register for every individual extension
 point the plugin has implemented. Disabling a plugin through MultiPoint disables that behavior.
 The same is true for disabling &quot;*&quot; through MultiPoint (no default plugins will be automatically registered).
-Plugins can still be disabled through their individual extension points.</p>
+Plugins can still be turned off through their individual extension points.</p>
 <p>In terms of precedence, plugin config follows this basic hierarchy</p>
 <ol>
 <li>Specific extension points</li>
@@ -1098,7 +1098,7 @@ Plugins can still be disabled through their individual extension points.</p>
 <li>The set of default plugins, as MultiPoint plugins
 This implies that a higher precedence plugin will run first and overwrite any settings within MultiPoint.
 Explicitly user-configured plugins also take a higher precedence over default plugins.
-Within this hierarchy, an Enabled setting takes precedence over Disabled. For example, if a plugin is
+Within this hierarchy, an Enabled setting takes precedence over an Inactive setting. For example, if a plugin is
 set in both <code>multiPoint.Enabled</code> and <code>multiPoint.Disabled</code>, the plugin will be enabled. Similarly,
 including <code>multiPoint.Disabled = '*'</code> and <code>multiPoint.Enabled = pluginA</code> will still register that specific
 plugin through MultiPoint. This follows the same behavior as all other extension point configurations.</li>

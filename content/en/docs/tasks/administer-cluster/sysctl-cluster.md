@@ -96,8 +96,8 @@ supports better isolation mechanisms.
 
 All _safe_ sysctls are enabled by default.
 
-All _unsafe_ sysctls are disabled by default and must be allowed manually by the
-cluster admin on a per-node basis. Pods with disabled unsafe sysctls will be
+All _unsafe_ sysctls are turned off by default and must be allowed manually by the
+cluster admin on a per-node basis. Pods with unsafe sysctls disabled will be
 scheduled, but will fail to launch.
 
 With the warning above in mind, the cluster admin can allow certain _unsafe_

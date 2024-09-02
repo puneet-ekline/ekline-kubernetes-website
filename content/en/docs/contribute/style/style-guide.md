@@ -182,11 +182,11 @@ The Kubernetes API server offers an OpenAPI spec. | The apiserver offers an Open
 Aggregated APIs are subordinate API servers. | Aggregated APIs are subordinate APIServers.
 {{< /table >}}
 
-### Use normal style for string and integer field values
+### Use standard style for string and integer field values
 
-For field values of type string or integer, use normal style without quotation marks.
+For field values of type string or integer, use common style without quotation marks.
 
-{{< table caption = "Do and Don't - Use normal style for string and integer field values" >}}
+{{< table caption = "Do and Don't - Use standard style for string and integer field values" >}}
 Do | Don't
 :--| :-----
 Set the value of `imagePullPolicy` to Always. | Set the value of `imagePullPolicy` to "Always".

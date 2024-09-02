@@ -217,7 +217,7 @@ internet-facing cluster, or a production cluster.
 
 ## Enable addons
 
-The minikube tool includes a set of built-in {{< glossary_tooltip text="addons" term_id="addons" >}} that can be enabled, disabled and opened in the local Kubernetes environment.
+The minikube tool includes a set of built-in {{< glossary_tooltip text="addons" term_id="addons" >}} that can be enabled, turned off, and opened in the local Kubernetes environment.
 
 1. List the currently supported addons:
 

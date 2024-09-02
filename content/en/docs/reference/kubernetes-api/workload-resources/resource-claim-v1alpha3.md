@@ -314,7 +314,7 @@ ResourceClaimStatus tracks whether the resource has been allocated and what the 
 
       - **allocation.devices.config.source** (string), required
 
-        Source records whether the configuration comes from a class and thus is not something that a normal user would have been able to set or from a claim.
+        Source records whether the configuration comes from a class and thus is not something that a typical user would have been able to set or from a claim.
 
       - **allocation.devices.config.opaque** (OpaqueDeviceConfiguration)
 

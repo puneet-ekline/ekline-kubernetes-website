@@ -14,7 +14,7 @@ Kubernetes' built-in `dockershim` component was removed in release v1.24.
 
 This page explains how your cluster could be using Docker as a container runtime,
 provides details on the role that `dockershim` plays when in use, and shows steps
-you can take to check whether any workloads could be affected by `dockershim` removal.
+you can take to check whether any workloads could be impacted by dockershim removal.
 
 ## Finding if your app has a dependencies on Docker {#find-docker-dependencies}
 

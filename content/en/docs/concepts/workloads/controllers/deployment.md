@@ -697,7 +697,7 @@ ReplicaSet with the most replicas. ReplicaSets with zero replicas are not scaled
 
 In our example above, 3 replicas are added to the old ReplicaSet and 2 replicas are added to the
 new ReplicaSet. The rollout process should eventually move all replicas to the new ReplicaSet, assuming
-the new replicas become healthy. To confirm this, run:
+the new replicas become operational. To confirm this, run:
 
 ```shell
 kubectl get deploy

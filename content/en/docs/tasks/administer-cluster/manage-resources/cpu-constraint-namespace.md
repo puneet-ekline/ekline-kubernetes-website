@@ -106,7 +106,7 @@ Create the Pod:
 kubectl apply -f https://k8s.io/examples/admin/resource/cpu-constraints-pod.yaml --namespace=constraints-cpu-example
 ```
 
-Verify that the Pod is running and that its container is healthy:
+Verify that the Pod is running and that its container is functioning properly.
 
 ```shell
 kubectl get pod constraints-cpu-demo --namespace=constraints-cpu-example

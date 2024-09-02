@@ -85,7 +85,7 @@ in a self-hosted way.
 
 ## How do I turn off an admission controller?
 
-The Kubernetes API server flag `disable-admission-plugins` takes a comma-delimited list of admission control plugins to be disabled, even if they are in the list of plugins enabled by default.
+The Kubernetes API server flag `disable-admission-plugins` takes a comma-delimited list of admission control plugins to be turned off, even if they are in the list of plugins enabled by default.
 
 ```shell
 kube-apiserver --disable-admission-plugins=PodNodeSelector,AlwaysDeny ...
@@ -234,7 +234,7 @@ Most users do not need this feature at all, and cluster admins should consider d
 Clusters that do need to use this feature should consider using some custom policy to manage usage
 of it.
 
-This admission controller is disabled by default.
+This admission controller is turned off by default.
 
 ### EventRateLimit {#eventratelimit}
 
@@ -284,7 +284,7 @@ limits:
 See the [EventRateLimit Config API (v1alpha1)](/docs/reference/config-api/apiserver-eventratelimit.v1alpha1/)
 for more details.
 
-This admission controller is disabled by default.
+This admission controller is turned off by default.
 
 ### ExtendedResourceToleration {#extendedresourcetoleration}
 
@@ -297,7 +297,7 @@ name as the key. This admission controller, if enabled, automatically
 adds tolerations for such taints to pods requesting extended resources, so users don't have to manually
 add these tolerations.
 
-This admission controller is disabled by default.
+This admission controller is turned off by default.
 
 ### ImagePolicyWebhook {#imagepolicywebhook}
 
@@ -305,7 +305,7 @@ This admission controller is disabled by default.
 
 The ImagePolicyWebhook admission controller allows a backend webhook to make admission decisions.
 
-This admission controller is disabled by default.
+This admission controller is turned off by default.
 
 #### Configuration file format {#imagereview-config-file-format}
 
@@ -470,7 +470,7 @@ In any case, the annotations are provided by the user and are not validated by K
 This admission controller denies any pod that defines `AntiAffinity` topology key other than
 `kubernetes.io/hostname` in `requiredDuringSchedulingRequiredDuringExecution`.
 
-This admission controller is disabled by default.
+This admission controller is turned off by default.
 
 ### LimitRanger {#limitranger}
 
@@ -631,7 +631,7 @@ For more information about persistent volume claims, see [PersistentVolumeClaims
 This admission controller defaults and limits what node selectors may be used within a namespace
 by reading a namespace annotation and a global configuration.
 
-This admission controller is disabled by default.
+This admission controller is turned off by default.
 
 #### Configuration file format
 
@@ -738,7 +738,7 @@ metadata:
     scheduler.alpha.kubernetes.io/tolerationsWhitelist: '[{"operator": "Exists", "effect": "NoSchedule", "key": "dedicated-node"}]'
 ```
 
-This admission controller is disabled by default.
+This admission controller is turned off by default.
 
 ### Priority {#priority}
 

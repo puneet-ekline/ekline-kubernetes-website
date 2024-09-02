@@ -13,7 +13,7 @@ override the hostname; or specific logic for a cloud provider.
 The kubelet works in terms of a PodSpec. A PodSpec is a YAML or JSON object
 that describes a pod. The kubelet takes a set of PodSpecs that are provided
 through various mechanisms (primarily through the apiserver) and ensures that
-the containers described in those PodSpecs are running and healthy. The
+the containers described in those PodSpecs are running and operational. The
 kubelet doesn't manage containers which were not created by Kubernetes.
 
 Other than from a PodSpec from the apiserver, there are two ways that a
@@ -643,7 +643,7 @@ WindowsHostNetwork=true|false (ALPHA - default=true)<br/>
 <td colspan="2">--local-storage-capacity-isolation&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default: <code>true</code></td>
 </tr>
 <tr>
-<td></td><td style="line-height: 130%; word-wrap: break-word;">If true, local ephemeral storage isolation is enabled. Otherwise, local storage isolation feature will be disabled. (DEPRECATED: This parameter should be set via the config file specified by the kubelet's <code>--config</code> flag. See <a href="https://kubernetes.io/docs/tasks/administer-cluster/kubelet-config-file/">kubelet-config-file</a> for more information.)</td>
+<td></td><td style="line-height: 130%; word-wrap: break-word;">If true, local ephemeral storage isolation is enabled. Otherwise, local storage isolation feature will be turned off. (DEPRECATED: This parameter should be set via the config file specified by the kubelet's <code>--config</code> flag. See <a href="https://kubernetes.io/docs/tasks/administer-cluster/kubelet-config-file/">kubelet-config-file</a> for more information.)</td>
 </tr>
 
 <tr>

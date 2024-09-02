@@ -11,7 +11,7 @@ min-kubernetes-server-version: 1.23
 
 Windows HostProcess containers enable you to run containerized
 workloads on a Windows host. These containers operate as
-normal processes but have access to the host network namespace,
+processes but have access to the host network namespace,
 storage, and devices when given the appropriate user privileges.
 HostProcess containers can be used to deploy network plugins,
 storage configurations, device plugins, kube-proxy, and other

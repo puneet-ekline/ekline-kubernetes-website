@@ -29,7 +29,7 @@ Migration is not needed and this guide can be ignored.
 
 Leader Migration can be enabled by setting `--enable-leader-migration` on
 `kube-controller-manager` or `cloud-controller-manager`. Leader Migration only
-applies during the upgrade and can be safely disabled or left enabled after the
+applies during the upgrade and can be safely turned off or left enabled after the
 upgrade is complete.
 
 This guide walks you through the manual process of upgrading the control plane from
@@ -202,7 +202,7 @@ one of version N + 1 each time until there are only nodes of version N.
 
 Now that the control plane has been upgraded to run both `kube-controller-manager`
 and `cloud-controller-manager` of version N + 1, Leader Migration has finished its
-job and can be safely disabled to save one Lease resource. It is safe to re-enable
+job and can be safely turned off to save one Lease resource. It is safe to re-enable
 Leader Migration for the rollback in the future.
 
 In a rolling manager, update manifest of `cloud-controller-manager` to unset both

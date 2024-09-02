@@ -95,7 +95,7 @@ serve the requested resource. This check happens using the internal
 
 * If a valid internal `StorageVersion` object is found for the requested resource
   (for example, `GET /batch/v1/jobs`) and the API server trying to handle the request
-  (the _handling API server_) has the `batch` API disabled, then the _handling API server_
+  (the _handling API server_) has the `batch` API turned off, then the _handling API server_
   fetches the peer API servers that do serve the relevant API group / version / resource
   (`api/v1/batch` in this case) using the information in the fetched `StorageVersion` object.
   The _handling API server_ then proxies the request to one of the matching peer kube-apiservers

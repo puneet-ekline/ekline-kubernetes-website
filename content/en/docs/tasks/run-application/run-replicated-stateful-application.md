@@ -89,7 +89,7 @@ Because the headless Service is named `mysql`, the Pods are accessible by
 resolving `<pod-name>.mysql` from within any other Pod in the same Kubernetes
 cluster and namespace.
 
-The client Service, called `mysql-read`, is a normal Service with its own
+The client Service, called `mysql-read`, is a typical Service with its own
 cluster IP that distributes connections across all MySQL Pods that report
 being Ready. The set of potential endpoints includes the primary MySQL server and all
 replicas.
@@ -404,7 +404,7 @@ mysql-2   2/2     Running         0          30s       10.244.5.32   kubernetes-
 And again, you should see server ID `102` disappear from the
 `SELECT @@server_id` loop output for a while and then return.
 
-Now uncordon the Node to return it to a normal state:
+Now uncordon the Node to return it to its standard state:
 
 ```shell
 kubectl uncordon <node-name>

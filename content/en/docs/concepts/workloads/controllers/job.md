@@ -92,8 +92,8 @@ Pod Template:
 Events:
   Type    Reason            Age   From            Message
   ----    ------            ----  ----            -------
-  Normal  SuccessfulCreate  21s   job-controller  Created pod: pi-xf9p4
-  Normal  Completed         18s   job-controller  Job completed
+  SuccessfulCreate  21s   job-controller  Created pod: pi-xf9p4
+  Completed         18s   job-controller  Job completed
 {{< /tab >}}
 {{< tab name="kubectl get job pi -o yaml" codelang="bash" >}}
 apiVersion: batch/v1
@@ -1137,7 +1137,7 @@ status:
 {{< note >}}
 You can only set the `managedBy` field on Jobs if you enable the `JobManagedBy`
 [feature gate](/docs/reference/command-line-tools-reference/feature-gates/)
-(disabled by default).
+(by default).
 {{< /note >}}
 
 This feature allows you to disable the built-in Job controller, for a specific

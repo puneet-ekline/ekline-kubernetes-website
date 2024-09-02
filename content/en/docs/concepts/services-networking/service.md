@@ -29,8 +29,8 @@ on the network so that clients can interact with it.
 
 If you use a {{< glossary_tooltip term_id="deployment" >}} to run your app,
 that Deployment can create and destroy Pods dynamically. From one moment to the next,
-you don't know how many of those Pods are working and healthy; you might not even know
-what those healthy Pods are named.
+you don't know how many of those Pods are working and functional; you might not even know
+what those Pods are named.
 Kubernetes {{< glossary_tooltip term_id="pod" text="Pods" >}} are created and destroyed
 to match the desired state of your cluster. Pods are ephemeral resources (you should not
 expect that an individual Pod is reliable and durable).
@@ -986,7 +986,7 @@ mechanism Kubernetes provides to expose a Service with a virtual IP address.
 ### Traffic policies
 
 You can set the `.spec.internalTrafficPolicy` and `.spec.externalTrafficPolicy` fields
-to control how Kubernetes routes traffic to healthy (“ready”) backends.
+to control how Kubernetes routes traffic to functional (“ready”) backends.
 
 See [Traffic Policies](/docs/reference/networking/virtual-ips/#traffic-policies) for more details.
 

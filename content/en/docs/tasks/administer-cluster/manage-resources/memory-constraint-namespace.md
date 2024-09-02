@@ -97,7 +97,7 @@ Create the Pod:
 kubectl apply -f https://k8s.io/examples/admin/resource/memory-constraints-pod.yaml --namespace=constraints-mem-example
 ```
 
-Verify that the Pod is running and that its container is healthy:
+Verify that the Pod is running and that its container is operating correctly.
 
 ```shell
 kubectl get pod constraints-mem-demo --namespace=constraints-mem-example

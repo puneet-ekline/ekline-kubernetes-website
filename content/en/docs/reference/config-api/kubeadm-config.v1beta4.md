@@ -1827,7 +1827,7 @@ first alpha-numerically.</p>
 </td>
 <td>
    <p><code>controlPlaneComponentHealthCheck</code> is the amount of time to wait for a control plane
-component, such as the API server, to be healthy during <code>kubeadm init</code> and <code>kubeadm join</code>.
+component, such as the API server, to be functional during <code>kubeadm init</code> and <code>kubeadm join</code>.
 Default: 4m</p>
 </td>
 </tr>
@@ -1835,7 +1835,7 @@ Default: 4m</p>
 <a href="https://pkg.go.dev/k8s.io/apimachinery/pkg/apis/meta/v1#Duration"><code>meta/v1.Duration</code></a>
 </td>
 <td>
-   <p><code>kubeletHealthCheck</code> is the amount of time to wait for the kubelet to be healthy
+   <p><code>kubeletHealthCheck</code> is the amount of time to wait for the kubelet to be operational
 during <code>kubeadm init</code> and <code>kubeadm join</code>.
 Default: 4m</p>
 </td>

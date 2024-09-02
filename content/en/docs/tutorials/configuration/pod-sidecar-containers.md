@@ -73,7 +73,7 @@ Using Kubernetes' native support for sidecar containers provides several benefit
 ## Adopting built-in sidecar containers
 
 The `SidecarContainers` [feature gate](/docs/reference/command-line-tools-reference/feature-gates/) is in beta state starting from Kubernetes version 1.29 and is enabled by default.
-Some clusters may have this feature disabled or have software installed that is incompatible with the feature.
+Some clusters may have this feature turned off or have software installed that is incompatible with the feature.
 
 When this happens, the Pod may be rejected or the sidecar containers may block Pod startup, rendering the Pod useless.
 This condition is easy to detect as Pod simply get stuck on initialization. However, it is rarely clear what caused the problem.

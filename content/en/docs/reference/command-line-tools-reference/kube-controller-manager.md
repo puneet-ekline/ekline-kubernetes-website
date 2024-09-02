@@ -425,11 +425,11 @@ kube-controller-manager [flags]
 <td colspan="2">--disable-http2-serving</td>
 </tr>
 <tr>
-<td></td><td style="line-height: 130%; word-wrap: break-word;"><p>If true, HTTP2 serving will be disabled [default=false]</p></td>
+<td></td><td style="line-height: 130%; word-wrap: break-word;"><p>If true, HTTP2 serving will be turned off [default=false]</p></td>
 </tr>
 
 <tr>
-<td colspan="2">--disabled-metrics strings</td>
+<td colspan="2">--excluded-metrics strings</td>
 </tr>
 <tr>
 <td></td><td style="line-height: 130%; word-wrap: break-word;"><p>This flag provides an escape hatch for misbehaving metrics. You must provide the fully qualified metric name in order to disable it. Disclaimer: disabling metrics is higher in precedence than showing hidden metrics.</p></td>
@@ -754,7 +754,7 @@ kube-controller-manager [flags]
 <td colspan="2">--node-eviction-rate float&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default: 0.1</td>
 </tr>
 <tr>
-<td></td><td style="line-height: 130%; word-wrap: break-word;"><p>Number of nodes per second on which pods are deleted in case of node failure when a zone is healthy (see --unhealthy-zone-threshold for definition of healthy/unhealthy). Zone refers to entire cluster in non-multizone clusters.</p></td>
+<td></td><td style="line-height: 130%; word-wrap: break-word;"><p>Number of nodes per second on which pods are deleted in case of node failure when a zone is functional (see --unhealthy-zone-threshold for definition of functional/non-functional). Zone refers to entire cluster in non-multizone clusters.</p></td>
 </tr>
 
 <tr>
@@ -908,7 +908,7 @@ kube-controller-manager [flags]
 <td colspan="2">--secondary-node-eviction-rate float&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default: 0.01</td>
 </tr>
 <tr>
-<td></td><td style="line-height: 130%; word-wrap: break-word;"><p>Number of nodes per second on which pods are deleted in case of node failure when a zone is unhealthy (see --unhealthy-zone-threshold for definition of healthy/unhealthy). Zone refers to entire cluster in non-multizone clusters. This value is implicitly overridden to 0 if the cluster size is smaller than --large-cluster-size-threshold.</p></td>
+<td></td><td style="line-height: 130%; word-wrap: break-word;"><p>Number of nodes per second on which pods are deleted in case of node failure when a zone is unresponsive (see --unhealthy-zone-threshold for definition of responsive/unresponsive). Zone refers to entire cluster in non-multizone clusters. This value is implicitly overridden to 0 if the cluster size is smaller than --large-cluster-size-threshold.</p></td>
 </tr>
 
 <tr>
@@ -943,7 +943,7 @@ kube-controller-manager [flags]
 <td colspan="2">--terminated-pod-gc-threshold int32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default: 12500</td>
 </tr>
 <tr>
-<td></td><td style="line-height: 130%; word-wrap: break-word;"><p>Number of terminated pods that can exist before the terminated pod garbage collector starts deleting terminated pods. If &lt;= 0, the terminated pod garbage collector is disabled.</p></td>
+<td></td><td style="line-height: 130%; word-wrap: break-word;"><p>Number of terminated pods that can exist before the terminated pod garbage collector starts deleting terminated pods. If &lt;= 0, the terminated pod garbage collector is turned off.</p></td>
 </tr>
 
 <tr>

@@ -133,7 +133,7 @@ commands, if you are using systemd:
 systemctl daemon-reload && systemctl restart kubelet
 ```
 
-If the reload and restart are successful, the normal `kubeadm init` workflow continues.
+If the reload and restart are successful, the standard `kubeadm init` workflow continues.
 
 ### Workflow when using `kubeadm join`
 

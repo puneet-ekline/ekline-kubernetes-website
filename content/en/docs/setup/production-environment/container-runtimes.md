@@ -217,7 +217,7 @@ The `systemd` cgroup driver is recommended if you use [cgroup v2](/docs/concepts
 
 {{< note >}}
 If you installed containerd from a package (for example, RPM or `.deb`), you may find
-that the CRI integration plugin is disabled by default.
+that the CRI integration plugin is turned off by default.
 
 You need CRI support enabled to use containerd with Kubernetes. Make sure that `cri`
 is not included in the`disabled_plugins` list within `/etc/containerd/config.toml`;

@@ -198,7 +198,7 @@ If not, the creation request is rejected by the API server.
 {{< /note >}}
 
 {{< glossary_tooltip term_id="label" text="Labels" >}} from the static Pod are
-propagated into the mirror Pod. You can use those labels as normal via
+propagated into the mirror Pod. You can use those labels as usual via
 {{< glossary_tooltip term_id="selector" text="selectors" >}}, etc.
 
 If you try to use `kubectl` to delete the mirror Pod from the API server,

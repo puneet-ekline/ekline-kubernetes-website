@@ -104,7 +104,7 @@ The user can skip specific preflight checks or all of them with the `--ignore-pr
 - [Warning] if the host name cannot be reached via network lookup
 - [Error] if kubelet version is lower that the minimum kubelet version supported by kubeadm (current minor -1)
 - [Error] if kubelet version is at least one minor higher than the required controlplane version (unsupported version skew)
-- [Warning] if kubelet service does not exist or if it is disabled
+- [Warning] if kubelet service does not exist or if it is turned off
 - [Warning] if firewalld is active
 - [Error] if API server bindPort or ports 10250/10251/10252 are used
 - [Error] if `/etc/kubernetes/manifest` folder already exists and it is not empty
@@ -269,7 +269,7 @@ Please note that:
 
 #### API server
 
-The static Pod manifest for the API server is affected by the following parameters provided by the users:
+The static Pod manifest for the API server is influenced by the following parameters provided by the users
 
 - The `apiserver-advertise-address` and `apiserver-bind-port` to bind to; if not provided, those
   values default to the IP address of the default network interface on the machine and port 6443
@@ -335,7 +335,7 @@ Other API server flags that are set unconditionally are:
 
 #### Controller manager
 
-The static Pod manifest for the controller manager is affected by following parameters provided by
+The static Pod manifest for the controller manager is influenced by following parameters provided by
 the users:
 
 - If kubeadm is invoked specifying a `--pod-network-cidr`, the subnet manager feature required for
@@ -359,13 +359,13 @@ Other flags that are set unconditionally are:
 - Flags for using certificates generated in previous steps:
 
   - `--root-ca-file` to `ca.crt`
-  - `--cluster-signing-cert-file` to `ca.crt`, if External CA mode is disabled, otherwise to `""`
-  - `--cluster-signing-key-file` to `ca.key`, if External CA mode is disabled, otherwise to `""`
+  - `--cluster-signing-cert-file` to `ca.crt`, if External CA mode is not in use, otherwise to `""`
+  - `--cluster-signing-key-file` to `ca.key`, if External CA mode is turned off, otherwise to `""`
   - `--service-account-private-key-file` to `sa.key`
 
 #### Scheduler
 
-The static Pod manifest for the scheduler is not affected by parameters provided by the users.
+The static Pod manifest for the scheduler is not influenced by parameters provided by the users.
 
 ### Generate static Pod manifest for local etcd
 

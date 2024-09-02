@@ -70,7 +70,7 @@ EndpointSlice represents a subset of the endpoints that implement a service. For
 
     - **endpoints.conditions.ready** (boolean)
 
-      ready indicates that this endpoint is prepared to receive traffic, according to whatever system is managing the endpoint. A nil value indicates an unknown state. In most cases consumers should interpret this unknown state as ready. For compatibility reasons, ready should never be "true" for terminating endpoints, except when the normal readiness behavior is being explicitly overridden, for example when the associated Service has set the publishNotReadyAddresses flag.
+      ready indicates that this endpoint is prepared to receive traffic, according to whatever system is managing the endpoint. A nil value indicates an unknown state. In most cases consumers should interpret this unknown state as ready. For compatibility reasons, ready should never be "true" for terminating endpoints, except when the readiness behavior is being explicitly overridden, for example when the associated Service has set the publishNotReadyAddresses flag.
 
     - **endpoints.conditions.serving** (boolean)
 

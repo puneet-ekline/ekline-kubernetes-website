@@ -569,7 +569,7 @@ Keep in mind that the removal of `spec.replicas` may incur a one-time
 degradation of Pod counts as the default value of this key is 1 (reference
 [Deployment Replicas](/docs/concepts/workloads/controllers/deployment#replicas)).
 Upon the update, all Pods except 1 will begin their termination procedures. Any
-deployment application afterwards will behave as normal and respect a rolling
+deployment application afterwards will behave as expected and respect a rolling
 update configuration as desired. You can avoid this degradation by choosing one of the following two
 methods based on how you are modifying your deployments:
 
