@@ -522,13 +522,13 @@ JSONSchemaProps is a JSON-Schema following Specification Draft 4 (http://json-sc
   1) `granular`:
        These maps are actual maps (key-value pairs) and each fields are independent
        from each other (they can each be manipulated by separate actors). This is
-       the default behaviour for all maps.
+       the default behavior for all maps.
   2) `atomic`: the list is treated as a single entity, like a scalar.
        Atomic maps will be entirely replaced when updated.
 
 - **x-kubernetes-preserve-unknown-fields** (boolean)
 
-  x-kubernetes-preserve-unknown-fields stops the API server decoding step from pruning fields which are not specified in the validation schema. This affects fields recursively, but switches back to normal pruning behaviour if nested properties or additionalProperties are specified in the schema. This can either be true or undefined. False is forbidden.
+  x-kubernetes-preserve-unknown-fields stops the API server decoding step from pruning fields which are not specified in the validation schema. This affects fields recursively, but switches back to typical pruning behavior if nested properties or additionalProperties are specified in the schema. This can either be true or undefined. False is forbidden.
 
 - **x-kubernetes-validations** ([]ValidationRule)
 
